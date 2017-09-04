@@ -2,16 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
+    <div th:include="top :: header" th:remove="tag"></div>
     <title>Spring Security Example</title>
 </head>
 <body>
-<h1>Welcome!</h1>
-
-<ul>
-    <li><a href="/home">Home</a></li>
-    <li><a href="/hello">Hello</a></li>
-    <li><a href="/login">login</a></li>
-</ul>
+<div th:include="top :: menu" th:remove="tag"></div>
 
 <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
 
