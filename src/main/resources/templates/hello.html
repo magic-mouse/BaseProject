@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Hello World!</title>
+</head>
+<body>
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+<ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/hello">Hello</a></li>
+    <li><a href="/login">login</a></li>
+</ul>
+
+
+<p>Has Role:</p>
+<li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
+<p>Has authority:</p>
+<div sec:authorize="hasAuthority('USER')" > Has Authority USER </div>
+
+<div sec:authorize="hasAuthority('ADMIN')" > Has Authority ADMIN </div>
+<div sec:authorize="hasAuthority('USER')" > Has Authority USER </div>
+<div sec:authorize="hasRole('ROLE_ADMIN')">Has Role ROLE_ADMIN</div>
+<div sec:authorize="hasRole('ROLE_USER')">Has Role ROLE_USER</div>
+<div sec:authorize="hasRole('ADMIN')">Has Role ADMIN</div>
+<div sec:authorize="hasRole('USER')">Has Role USER</div>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>

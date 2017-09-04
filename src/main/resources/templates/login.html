@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Spring Security Example </title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/hello">Hello</a></li>
+    <li><a href="/login">login</a></li>
+</ul>
+
+
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<form th:action="@{/login}" method="post">
+    <h2>Login - custom text</h2>
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+
+    <div sec:authentication="name">
+        The value of the "name" property of the authentication object should appear here.
+    </div>
+
+    <div sec:authorize="hasRole('ROLE_USER')">
+        This content is only shown to users.
+    </div>
+</form>
+</body>
+</html>
