@@ -20,14 +20,6 @@
     <div><label> User Name : <input type="text" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
     <div><input type="submit" value="Sign In"/></div>
-
-    <div sec:authentication="name">
-        The value of the "name" property of the authentication object should appear here.
-    </div>
-
-    <div sec:authorize="hasRole('ROLE_USER')">
-        This content is only shown to users.
-    </div>
 </form>
 </body>
 </html>

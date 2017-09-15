@@ -8,22 +8,27 @@
 <body>
 <div th:include="top :: menu" th:remove="tag"></div>
 
-<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+<div class="container-fluid">
+    <div class="starter-template">
+        <h1></h1>
 
-Logged user: <span sec:authentication="name">Bob</span>
+        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+
+        Logged user: <span sec:authentication="name">Bob</span>
 
 
-<li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
+        <li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
 
-<div sec:authentication="name">
-    The value of the "name" property of the authentication object should appear here.
+        <div sec:authentication="name">
+            The value of the "name" property of the authentication object should appear here.
+        </div>
+
+        <div sec:authorize="hasAuthority('USER')"> Has Authority USER</div>
+
+        <div sec:authorize="hasRole('ROLE_USER')">
+            This content is only shown to administrators.
+        </div>
+    </div>
 </div>
-
-<div sec:authorize="hasAuthority('USER')" > Has Authority USER </div>
-
-<div sec:authorize="hasRole('ROLE_USER')">
-    This content is only shown to administrators.
-</div>
-
 </body>
 </html>

@@ -5,15 +5,21 @@
 <head>
     <div th:include="top :: header" th:remove="tag"></div>
     <title>Hello World!</title>
+
+
+
 </head>
 <body>
 <div th:include="top :: menu" th:remove="tag"></div>
 
 <div class="container-fluid">
     <div class="starter-template">
-        <h1>User Information</h1>
-        <p>Has Role:</p>
-        <li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
+        <h1>Userdata</h1>
+        <table class="table table-striped">
+            <tr><td><label>Username:</label></td><td> <span th:text="${userName}"></span></td></tr>
+            <tr><td><label>Roles:</label></td><td> <span th:text="${userRole}"></span></td></tr>
+            <tr><td><label>Email:</label></td><td> <span th:text="${email}"></span></td></tr>
+        </table>
 
     </div>
 </div>
