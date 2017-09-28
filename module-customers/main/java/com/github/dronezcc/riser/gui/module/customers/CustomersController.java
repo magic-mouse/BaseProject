@@ -14,7 +14,7 @@ public class CustomersController {
          return "module/customers/customers";
     }
     @RequestMapping("/customers/add")
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String addCustomer(Model model) {
         return "module/customers/add";
     }
