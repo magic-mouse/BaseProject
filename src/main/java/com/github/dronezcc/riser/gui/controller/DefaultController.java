@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.gui.module.base;
+package com.github.dronezcc.riser.gui.controller;
 
 import com.github.dronezcc.riser.gui.module.base.models.Pages;
 import com.github.dronezcc.riser.gui.module.base.models.PagesService;
