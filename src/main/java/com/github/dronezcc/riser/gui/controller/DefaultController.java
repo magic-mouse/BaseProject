@@ -19,6 +19,10 @@ public class DefaultController {
 
     @RequestMapping("/")
     public String showFrontpage(Model model) {
+
+
+
+
          return "module/base/frontpage";
     }
 
@@ -34,7 +38,6 @@ public class DefaultController {
 
     @RequestMapping("/p/{p}")
     public String showPage(@PathVariable String p,  Model model) {
-
         Pages page = pagesService.getPage(p);
 
         if(page == null){
