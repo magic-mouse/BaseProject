@@ -4,6 +4,7 @@ import com.github.dronezcc.riser.gui.domain.*;
 import com.github.dronezcc.riser.gui.services.ReCaptchaService;
 import com.github.dronezcc.riser.gui.services.UserRoleService;
 import com.github.dronezcc.riser.gui.services.UserService;
+import com.github.dronezcc.riser.gui.services.ValidatorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,16 +36,28 @@ public class PageController {
     @Autowired
     UserRoleService userRoleService;
 
+    @Autowired
+    ValidatorService validatorService;
+
 
 
     @RequestMapping(value = "/login/validate", method = RequestMethod.POST)
-    public String validateLostPassword(@RequestParam("g-recaptcha-response") String lpv ){
+    public String validateLostPassword(@RequestParam("g-recaptcha-response") String lpv, @RequestParam("exampleInputEmail1") String email ){
 
             if(!reCaptchaService.validateService(lpv)){
                 log.error("User could not reset password, captcha was not validated!");
                 return "redirect:/login/splash-error";
             }
 
+            if(!validatorService.validatEmail(email)){
+                log.error("User did not submit a valid mail address!");
+                return "redirect:/login/splash-error";
+            }
+
+            if(!validatorService.emailExists(email)){
+                log.error("Mail address did not exists: " + email);
+                return "redirect:/login/splash-error";
+            }
 
 
 

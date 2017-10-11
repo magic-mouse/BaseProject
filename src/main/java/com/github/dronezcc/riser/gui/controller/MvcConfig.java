@@ -5,7 +5,6 @@ import com.github.dronezcc.riser.gui.module.base.models.PagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -34,7 +33,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
         List<Pages> pagesList =pagesService.getAllPages();
 
-        pagesList.forEach(c -> registry.addViewController(c.getPath()).setViewName(c.getTemplate()));
+        pagesList.forEach(c -> registry.addViewController(c.getPath()).setViewName("/p/" + c.getTemplate()));
 
 
     }

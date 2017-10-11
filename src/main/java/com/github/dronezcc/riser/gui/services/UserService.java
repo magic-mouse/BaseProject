@@ -29,4 +29,10 @@ public class UserService {
         users.forEach(us -> {us.setPassword(""); userList.add(us);});
         return userList;
     }
+
+    public User findByEmail(String email) {
+
+        return userRepository.findByEmail(email);
+
+    }
 }

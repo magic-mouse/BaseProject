@@ -50,16 +50,10 @@
 
 
 
-                <ul sec:authorize="isAnonymous()" class="nav navbar-nav navbar-right">
-
+                <ul sec:authorize="!isAuthenticated()" class="nav navbar-nav navbar-right">
                         <li role="presentation"><p class="navbar-btn"><a href="/login" class="btn btn-primary">login</a>  </p></li>
-
                 </ul>
-                <!--
-                                <form sec:authorize="isAnonymous()" th:action="@{/login}" method="post" class="navbar-form navbar-right">
-                                    <input type="submit" value="Sign In" class="btn btn-primary"/>
-                                </form>
-                -->
+
                 <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post" class="navbar-form navbar-right">
                     <input type="submit" value="Sign Out" class="btn btn-primary"/>
                 </form>

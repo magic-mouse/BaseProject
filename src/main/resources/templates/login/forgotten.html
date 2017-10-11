@@ -11,10 +11,15 @@
 
 <div class="container-fluid">
     <div class="starter-template">
-<form action="/login/validate" method="post">
-        <div class="g-recaptcha" data-sitekey="6LevxTMUAAAAAEhDTmmCZhbio6SFovp2qpXiBWRE"></div>
-    <button class="btn btn-primary" action="submit">Reset Password</button>
-</form>
+        <form action="/login/validate" method="post">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="Email" />
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LevxTMUAAAAAEhDTmmCZhbio6SFovp2qpXiBWRE"></div>
+            <button class="btn btn-primary" action="submit">Reset Password</button>
+        </form>
     </div>
 </div>
 </body>
