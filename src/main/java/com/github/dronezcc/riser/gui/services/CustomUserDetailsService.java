@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.gui.security;
+package com.github.dronezcc.riser.gui.services;
 
 import java.util.List;
 

@@ -1,65 +1,56 @@
 package com.github.dronezcc.riser.gui.controller;
 
-import com.github.dronezcc.riser.gui.domain.User;
-import com.github.dronezcc.riser.gui.domain.UserRepository;
-import com.github.dronezcc.riser.gui.domain.UserRole;
-import com.github.dronezcc.riser.gui.domain.UserRolesRepository;
+import com.github.dronezcc.riser.gui.domain.*;
+import com.github.dronezcc.riser.gui.services.ReCaptchaService;
+import com.github.dronezcc.riser.gui.services.UserRoleService;
+import com.github.dronezcc.riser.gui.services.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class PageController {
 
+
+
+
     Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    UserRepository userRepository;
+    ReCaptchaService reCaptchaService;
+
     @Autowired
-    UserRolesRepository userRolesRepository;
+    UserService userService;
 
-    /*
-    @RequestMapping("/backdoor")
-    @ResponseBody
-    public String addUser(Model model, @RequestParam(value="key") String key){
+    @Autowired
+    UserRoleService userRoleService;
 
-        if(!key.equals("secretKey")){return "";}
 
-        BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
-        String encoded_pass = bCryptPasswordEncoder.encode("Admin");
 
-        User user = new User();
-        user.setUserName("Admin");
-        user.setEnabled(1);
-        user.setEmail("admin@admin.ocm");
-        user.setPassword(encoded_pass);
+    @RequestMapping(value = "/login/validate", method = RequestMethod.POST)
+    public String validateLostPassword(@RequestParam("g-recaptcha-response") String lpv ){
 
-        User saved = userRepository.save(user);
+            if(!reCaptchaService.validateService(lpv)){
+                log.error("User could not reset password, captcha was not validated!");
+                return "redirect:/login/splash-error";
+            }
 
-        UserRole userRole = new UserRole();
-        userRole.setRole("ROLE_ADMIN");
-        userRole.setUserid(saved.getUserid());
-        userRolesRepository.save(userRole);
 
-        UserRole userRole1 = new UserRole();
-        userRole1.setUserid(saved.getUserid());
-        userRole1.setRole("ROLE_USER");
-        userRolesRepository.save(userRole1);
 
-        return "SUCCESS!";
+
+        log.info("Send email with login information");
+        return "redirect:/login/splash";
     }
-     */
 
     @RequestMapping("/user")
     @PreAuthorize("hasRole('ROLE_USER')")
@@ -70,9 +61,9 @@ public class PageController {
         try {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             String name = auth.getName();
-            user = userRepository.findByUserName(name);
+            user = userService.findByUserName(name);
 
-            userRole = userRolesRepository.findRoleByUserName(name);
+            userRole = userRoleService.findRoleByUserName(name);
 
         }catch(Exception err){
             log.error("could not find logged in user!");
@@ -96,8 +87,8 @@ public class PageController {
         User user = null;
         List<String> userRole = null;
         try {
-            user = userRepository.findByUserName(name);
-            userRole = userRolesRepository.findRoleByUserName(name);
+            user = userService.findByUserName(name);
+            userRole = userRoleService.findRoleByUserName(name);
         }catch(Exception err){
             log.error("could not find logged in user!");
         }

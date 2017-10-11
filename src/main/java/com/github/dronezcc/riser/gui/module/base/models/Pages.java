@@ -21,6 +21,9 @@ public class Pages {
     @Column
     String author;
 
+    @Column
+    String template;
+
     public Pages() {
     }
 
@@ -62,5 +65,11 @@ public class Pages {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+
+
+    public String getTemplate() {
+        return template;
     }
 }

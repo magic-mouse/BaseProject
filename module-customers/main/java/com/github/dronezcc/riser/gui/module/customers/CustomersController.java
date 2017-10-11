@@ -1,11 +1,13 @@
 package com.github.dronezcc.riser.gui.module.customers;
 
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@EnableWebSecurity
 public class CustomersController {
 
     @RequestMapping("/customers")
