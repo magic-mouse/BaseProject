@@ -1,10 +1,7 @@
 package com.github.dronezcc.riser.gui.controller;
 
 import com.github.dronezcc.riser.gui.domain.*;
-import com.github.dronezcc.riser.gui.services.ReCaptchaService;
-import com.github.dronezcc.riser.gui.services.UserRoleService;
-import com.github.dronezcc.riser.gui.services.UserService;
-import com.github.dronezcc.riser.gui.services.ValidatorService;
+import com.github.dronezcc.riser.gui.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +19,6 @@ import java.util.*;
 @Controller
 public class PageController {
 
-
-
-
     Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
@@ -39,6 +33,8 @@ public class PageController {
     @Autowired
     ValidatorService validatorService;
 
+    @Autowired
+    MailSendingService mailSendingService;
 
 
     @RequestMapping(value = "/login/validate", method = RequestMethod.POST)
@@ -60,7 +56,7 @@ public class PageController {
             }
 
 
-
+        mailSendingService.sendPasswordResetMail(email);
         log.info("Send email with login information");
         return "redirect:/login/splash";
     }
