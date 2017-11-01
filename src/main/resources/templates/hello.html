@@ -11,10 +11,15 @@
 
 <div class="container-fluid">
     <div class="starter-template">
-        <h1>User Information</h1>
+        <div class="well">
+
+        <h1>User Information <small>Information about the user in this well</small></h1>
         <p>Has Role:</p>
         <li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
-
+            <div class="row">
+           <div class="col-md-2 col-md-offset-5"><a href="/login" class="btn btn-primary btn-lg">Login</a></div>
+            </div>
+        </div>
     </div>
 </div>
 

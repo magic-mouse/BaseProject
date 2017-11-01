@@ -32,7 +32,6 @@ public class ReCaptchaService {
 
         HttpEntity<MultiValueMap<String,String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
 
-
         ResponseEntity<Map> quote = restTemplate.postForEntity(captchaUrl,request, Map.class);
 
         return quote.getBody().get("success").toString().equals("true");
