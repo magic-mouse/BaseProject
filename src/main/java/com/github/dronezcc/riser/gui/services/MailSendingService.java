@@ -44,12 +44,13 @@ public class MailSendingService {
     }
 
 
-    public void sendPasswordResetMail(String email) {
+    public void sendPasswordResetMail(String email, String link, String token) {
         this.mailSender = getJavaMailSender();
 
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo(email);
         msg.setText("There should be some text here ... but there inst... Psyke!");
+        msg.setText("Link: " + link + "?token=" + token);
         msg.setSubject("Reset Mail");
         try{
             this.mailSender.send(msg);
