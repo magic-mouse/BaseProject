@@ -13,15 +13,18 @@
 <div th:include="top :: menu" th:remove="tag"></div>
 <div class="container-fluid">
     <div class="starter-template">
-        <h1>Users</h1>
-        <table class="table table-striped">
-            <tr ng-repeat="ud in userdata">
-                <td>{{ud.userid}}</td>
-                <td><a href="/admin/user?name={{ud.userName}}">{{ud.userName}}</a></td>
-                <td>{{ud.email}}</td>
-                <td>{{ud.enabled}}</td>
-            </tr>
-        </table>
+        <h1>New user</h1>
+<form method="post" action="/api/users/create">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" />
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"/>
+        </div>
+    <input type="submit" />
+</form>
     </div>
 </div>
 </body>
