@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:include="top :: header" th:remove="tag"></div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>Forgotten password reset</title>
+</head>
+<body>
+<div th:include="top :: menu" th:remove="tag"></div>
+
+<div class="container-fluid">
+    <div class="starter-template">
+        <h1>Something went wrong!</h1>
+        <p>Unfortnuately we cannot tell you what went wrong but we did log the incident!</p>
+        <p><strong>What can i do now?</strong> - You could try again! Most likely you wrote something wrong somewhere and if you try again make sure you dont have typos.</p>
+        <p>You can also try and contact the customer support, they can read the logs and help you with the problem!</p>
+        <p><strong>Be aware</strong> that the validation running on this page is a step by step, so it can be different reasons why this page was shown.</p>
+    </div>
+</div>
+</body>
+</html>

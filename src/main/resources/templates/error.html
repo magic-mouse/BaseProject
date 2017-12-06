@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:include="top :: header" th:remove="tag"></div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <title>Error</title>
+</head>
+<body>
+<div th:include="top :: menu" th:remove="tag"></div>
+
+<div class="container-fluid">
+    <div class="starter-template">
+        <h1>Now something went wrong!</h1>
+        <p>Now you see this page and somethig went wrong! We are so sorry this happened, but since you are here try and
+        backtrack your steps and see if you can se where it happened.</p>
+        <p>The page you were looking for might not exist, or you tried to access a page that was password protected.</p>
+        <h2>But what do i do now?</h2>
+        <p>If it was a critical error it was logged and our developers will look at it, if it was a happy little accident,
+        continue to enjoy our services.</p>
+        <h2 th:if="${error} != null">But i want to get technical!</h2>
+        <p th:if="${error} != null">Oh! Well here you go, here is the dirty details: </p>
+        <p th:if="${error} != null" th:text="${status + ' ' + error}"></p>
+    </div>
+</div>
+</body>
+</html>
