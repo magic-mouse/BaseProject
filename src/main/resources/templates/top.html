@@ -22,9 +22,6 @@
 <body>
 
 <div th:fragment="menu">
-
-
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,8 +43,65 @@
                     <li role="presentation"><a href="/">Root</a></li>
                     <li role="presentation"><a href="/home">Home</a></li>
                     <li role="presentation"><a href="/customers">Customers</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li  role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/vision">vision</a></li>
+                            <li><a href="#who-are-we">who are we</a></li>
+                            <li><a href="#leadership">leadership</a></li>
+                            <li><a href="#news">news</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
+                <ul class="nav navbar-nav">
+                    <li  role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">customer <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#why">why</a></li>
+                            <li><a href="#who">who</a></li>
+                            <li><a href="#signup">signup</a></li>
+                            <li><a href="#logon">logon</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li  role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">supplier <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#why">why</a></li>
+                            <li><a href="#who">who</a></li>
+                            <li><a href="#signup">signup</a></li>
+                            <li><a href="#logon">logon</a></li>
+                            <li><a href="#free-trial">free trial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li  role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">contact <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#email">email</a></li>
+                            <li><a href="#phone">phone</a></li>
+                            <li><a href="#address">address</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li  role="presentation" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">logon <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#customer">customer</a></li>
+                            <li><a href="#supplier">supplier</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
 
                 <ul sec:authorize="!isAuthenticated()" class="nav navbar-nav navbar-right">

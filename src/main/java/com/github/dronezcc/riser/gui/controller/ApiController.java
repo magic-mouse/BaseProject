@@ -39,7 +39,6 @@ public class ApiController {
     public List<User> showUsers(){
         return userService.findAll();
     }
-
     @RequestMapping("/api/secret_password")
     public void secretPassword(@RequestParam("password") String password, @RequestParam("name") String name) throws Exception {
         BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
