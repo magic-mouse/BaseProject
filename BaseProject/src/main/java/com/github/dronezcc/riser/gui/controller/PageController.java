@@ -118,29 +118,29 @@ public class PageController {
         return "user/user";
     }
 
-    @RequestMapping("/admin/user")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String adminUser(@RequestParam(value = "name") String name, Model model) {
-
-        User user = null;
-        List<String> userRole = null;
-        try {
-            user = userService.findByUserName(name);
-            userRole = userRoleService.findRoleByUserName(name);
-        } catch (Exception err) {
-            log.error("could not find logged in user!");
-        }
-        String userName = user.getUserName();
-        String email = user.getEmail();
-        int active = user.getEnabled();
-
-
-        model.addAttribute("userName", userName);
-        model.addAttribute("email", email);
-        model.addAttribute("userRole", userRole);
-        model.addAttribute("active", active);
-
-        return "user/user";
-    }
+//    @RequestMapping("/admin/user")
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    public String adminUser(@RequestParam(value = "name") String name, Model model) {
+//
+//        User user = null;
+//        List<String> userRole = null;
+//        try {
+//            user = userService.findByUserName(name);
+//            userRole = userRoleService.findRoleByUserName(name);
+//        } catch (Exception err) {
+//            log.error("could not find logged in user!");
+//        }
+//        String userName = user.getUserName();
+//        String email = user.getEmail();
+//        int active = user.getEnabled();
+//
+//
+//        model.addAttribute("userName", userName);
+//        model.addAttribute("email", email);
+//        model.addAttribute("userRole", userRole);
+//        model.addAttribute("active", active);
+//
+//        return "user/user";
+//    }
 
 }

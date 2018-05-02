@@ -9,9 +9,10 @@ angular.module('admin', [])
             });
     })
     .controller('adminadd', function ($scope, $http) {
-
+        console.log("World");
         $scope.createUser = function(){
-            $http.post('/api/users/create?email=' +  $scope.email + '&username='+ $scope.username);
+            console.log("Hello", $scope.user );
+            $http.post('/api/users/create', $scope.user);
         }
 
 

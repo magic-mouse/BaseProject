@@ -3,37 +3,5 @@ spring:
     password: SomeRandomPass!
     url: jdbc:mysql://localhost/gui?useSSL=false
     username: mouse
-    driver-class-name: com.mysql.jdbc.Driver
-    testWhileIdle: true
-    timeBetweenEvictionRunsMillis: 60000
-    validationQuery: SELECT 1
-
-  jpa:
-    database: MYSQL
-    database-platform: org.hibernate.dialect.MySQL5Dialect
-    hibernate.ddl-auto: update
-    show-sql: true
 server:
   port: 8888
-
-captcha:
-  path: https://www.google.com/recaptcha/api/siteverify
-  secret: 6LevxTMUAAAAAE8crqAKKFJSQ9s2X5MnnTWYdOjH
-
-application:
-  mail:
-    host: localhost
-    port: 2525
-    userName: my.gmail@gmail.com
-    password: password
-
-mail:
-  transport:
-    protocol: smtp
-  smtp:
-    auth: true
-    starttls:
-      enable: true
-  debug: true
-
-

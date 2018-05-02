@@ -14,13 +14,11 @@ public class Token {
     long userId;
 
     public Token() {
-
     }
 
     public Long getIdentity() {
         return identity;
     }
-
 
     public String getValidTo() {
         return validTo;

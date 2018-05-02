@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/custom/custom.iml" filepath="$PROJECT_DIR$/custom/custom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BaseProject/gui.iml" filepath="$PROJECT_DIR$/BaseProject/gui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/this-framework.iml" filepath="$PROJECT_DIR$/this-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom/customers.iml" filepath="$PROJECT_DIR$/custom/customers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gui.iml" filepath="$PROJECT_DIR$/gui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseProject/gui (1) (com.github.dronezcc.riser).iml" filepath="$PROJECT_DIR$/BaseProject/gui (1) (com.github.dronezcc.riser).iml" />
     </modules>
   </component>
 </project>

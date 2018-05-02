@@ -7,8 +7,6 @@ public class SendValue {
     String secret;
     String response;
 
-
-
     public SendValue() {
 
     }

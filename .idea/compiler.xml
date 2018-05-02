@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="custom" />
-        <module name="gui" />
+        <module name="customers" />
+        <module name="gui (1) (com.github.dronezcc.riser)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="custom" target="1.8" />
-      <module name="gui" target="1.8" />
-      <module name="this-framework" target="1.5" />
+      <module name="customers" target="1.8" />
+      <module name="gui" target="1.5" />
+      <module name="gui (1) (com.github.dronezcc.riser)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

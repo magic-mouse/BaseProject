@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:include="top :: header" th:remove="tag"></div>
+    <title>Spring Security Example</title>
+</head>
+<body>
+<div th:include="top :: menu" th:remove="tag"></div>
+
+<div class="container-fluid">
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/user">Home</a></li>
+            <li role="presentation"><a href="/admin/user/add">New user</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>Page Admin</h1>
+
+
+
+    </div>
+</div>
+</body>
+</html>

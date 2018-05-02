@@ -49,11 +49,6 @@ public class DefaultController {
         return "module/base/page";
     }
 
-    @RequestMapping("/module/base/admin/")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String showModuleAdmin(Model model)
-    {
-        return "module/base/admin/admin";
-    }
+
 }
 

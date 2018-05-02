@@ -27,9 +27,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/login/forgotten").setViewName("login/forgotten");
         registry.addViewController("/login/splash").setViewName("login/splash");
         registry.addViewController("/login/splash-error").setViewName("login/splash-error");
-        // Administration
-        registry.addViewController("/admin/add").setViewName("/admin/add");
-        registry.addViewController("/admin/users").setViewName("/admin/users");
+
 
     }
 

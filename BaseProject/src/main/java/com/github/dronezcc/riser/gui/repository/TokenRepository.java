@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TokenRepository extends CrudRepository<Token, Long>{
-
     Token findByIdentity(Long token);
 }

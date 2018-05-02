@@ -2,6 +2,7 @@ package com.github.dronezcc.riser.gui.controller;
 
 import com.github.dronezcc.riser.gui.domain.User;
 import com.github.dronezcc.riser.gui.domain.UserRole;
+import com.github.dronezcc.riser.gui.model.ApiUser;
 import com.github.dronezcc.riser.gui.services.UserRoleService;
 import com.github.dronezcc.riser.gui.services.UserService;
 import org.slf4j.Logger;
@@ -17,7 +18,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class ApiController {
@@ -32,6 +35,7 @@ public class ApiController {
         this.userRoleService = userRoleService;
         this.userService = userService;
     }
+
 
     @RequestMapping("/api/users")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -52,22 +56,25 @@ public class ApiController {
 
     @RequestMapping(value = "/api/users/create", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public User newUser(@RequestParam("username") String username, @RequestParam("email") String email) throws Exception {
+    public User newUser(@RequestBody ApiUser apiUser) throws Exception {
+
+        log.debug(apiUser.toString());
+
         User user = new User();
-        user.setEmail(email);
-        user.setUserName(username);
-        user.setEnabled(1);
+        user.setEmail(apiUser.getEmail());
+        user.setUserName(apiUser.getUsername());
+        user.setEnabled(apiUser.isActive()?1:0);
         User savedUser = userService.save(user);
 
-        UserRole ur = new UserRole();
-        ur.setUserid(savedUser.getUserid());
-        ur.setRole("ROLE_ADMIN");
 
-        userRoleService.save(ur);
-        UserRole ur_user = new UserRole();
-        ur_user.setUserid(savedUser.getUserid());
-        ur_user.setRole("ROLE_USER");
-        userRoleService.save(ur_user);
+        apiUser.getRoles().forEach((key, val) -> {
+            if(val.equals("false")) return;
+
+            UserRole ur = new UserRole();
+            ur.setUserid(savedUser.getUserid());
+            ur.setRole(val);
+            userRoleService.save(ur);
+        });
 
         return savedUser;
     }
