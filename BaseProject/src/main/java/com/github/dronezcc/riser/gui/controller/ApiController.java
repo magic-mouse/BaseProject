@@ -1,5 +1,6 @@
 package com.github.dronezcc.riser.gui.controller;
 
+import com.github.dronezcc.riser.gui.domain.ResponseBase;
 import com.github.dronezcc.riser.gui.domain.User;
 import com.github.dronezcc.riser.gui.domain.UserRole;
 import com.github.dronezcc.riser.gui.model.ApiUser;
@@ -23,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/api")
 public class ApiController {
 
 
@@ -37,7 +39,7 @@ public class ApiController {
     }
 
 
-    @RequestMapping("/api/users")
+    @RequestMapping("/users")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<User> showUsers() {
         return userService.findAll();
@@ -54,7 +56,7 @@ public class ApiController {
     }
 
 
-    @RequestMapping(value = "/api/users/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/users/create", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public User newUser(@RequestBody ApiUser apiUser) throws Exception {
 
@@ -79,7 +81,7 @@ public class ApiController {
         return savedUser;
     }
 
-    @RequestMapping(value = "/api/users/set_password", method = RequestMethod.POST)
+    @RequestMapping(value = "/users/set_password", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_USER')")
     public ResponseEntity<?> updatePassword(@RequestParam("oldpassword") String oldPassword, @RequestParam("password") String password) throws Exception {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
@@ -100,5 +102,11 @@ public class ApiController {
             responseHeaders.setContentType(MediaType.APPLICATION_JSON);
             return new ResponseEntity<>(json, responseHeaders, HttpStatus.BAD_REQUEST);
         }
+    }
+
+    @RequestMapping(value="/base/add", method= RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> updateBase(@RequestBody ResponseBase responseBase){
+
     }
 }

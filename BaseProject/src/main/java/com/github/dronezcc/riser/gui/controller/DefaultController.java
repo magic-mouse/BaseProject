@@ -19,10 +19,6 @@ public class DefaultController {
 
     @RequestMapping("/")
     public String showFrontpage(Model model) {
-
-
-
-
          return "module/base/frontpage";
     }
 

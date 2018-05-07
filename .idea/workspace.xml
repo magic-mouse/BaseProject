@@ -2,41 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce119fd6-5b70-45e8-8601-3cd651d9ca45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/OpenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/model/ApiUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/model/Roles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/custom_Web_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/gui_Web_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/components/ProductBreadcrumbBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/Breadcrumb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/ResponseBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/SendValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/SendValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/TokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/TokenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRolesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/application-local.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/frontpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/frontpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/custom/target/" />
@@ -50,38 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="29" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/OpenController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+            <state relative-caret-position="374">
+              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,29 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MvcConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java">
+      <file leaf-file-name="admin-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExceptionController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ExceptionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="566">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -119,36 +55,44 @@
       <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html">
+      <file leaf-file-name="ApiController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+            <state relative-caret-position="498">
+              <caret line="108" column="62" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java">
+      <file leaf-file-name="ResponseBase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/ResponseBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="27" selection-start-line="14" selection-start-column="3" selection-end-line="25" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -198,20 +142,26 @@
         <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/CustomUserDetails.java" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/security/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/model/Roles.java" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/model/ApiUser.java" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/add.html" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java" />
-        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/Breadcrumb.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/components/ProductBreadcrumbBuilder.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/frontpage.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/add.html" />
         <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java" />
+        <option value="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/ResponseBase.java" />
       </list>
     </option>
   </component>
@@ -225,8 +175,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="520" />
-    <option name="y" value="40" />
+    <option name="x" value="248" />
+    <option name="y" value="256" />
     <option name="width" value="2800" />
     <option name="height" value="1920" />
   </component>
@@ -236,7 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,6 +237,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,6 +279,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
@@ -436,7 +416,38 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
@@ -486,7 +497,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -507,7 +518,12 @@
       <recent name="C:\code\BaseProject\BaseProject\src\main\resources\templates\admin\base" />
       <recent name="C:\code\BaseProject\BaseProject\src\main\resources\templates\admin\user" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\BaseProject\BaseProject\src\main\resources\templates\admin\base" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.dronezcc.riser.gui.domain" />
+      <recent name="com.github.dronezcc.riser.gui.components" />
       <recent name="com.github.dronezcc.riser.gui.model" />
     </key>
   </component>
@@ -604,12 +620,15 @@
       <workItem from="1524743191940" duration="715000" />
       <workItem from="1525082380499" duration="698000" />
       <workItem from="1525208596539" duration="5521000" />
-      <workItem from="1525249842121" duration="6350000" />
+      <workItem from="1525249842121" duration="8862000" />
+      <workItem from="1525345336883" duration="6877000" />
+      <workItem from="1525434915907" duration="597000" />
+      <workItem from="1525679757887" duration="901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26932000" />
+    <option name="totallyTimeSpent" value="37819000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -641,12 +660,12 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32900432" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run Dashboard" order="13" visible="true" weight="0.32900432" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run Dashboard" order="13" visible="true" weight="0.29545453" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900432" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26026666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15306666" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -661,10 +680,9 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32900432" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -672,23 +690,24 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32900432" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32900432" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26026666" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32900432" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900432" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26026666" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info anchor="bottom" id="Run Dashboard" order="13" visible="true" weight="0.32900432" />
@@ -710,130 +729,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="442">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ExceptionController.java">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="714">
+          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="86" column="54" lean-forward="true" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/application.properties" />
-    <entry file="file://$PROJECT_DIR$/custom/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/module/base/models/Pages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="1837" column="35" selection-start-line="1837" selection-start-column="35" selection-end-line="1837" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/services/MailTokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/services/MailSendingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/login/reset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="425">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="25" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/custom/src/main/java/com/github/dronezcc/riser/customers/CustomersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="442">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -876,20 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/TokenRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -939,15 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -955,12 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -971,41 +865,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ExceptionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="70" />
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/feed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="143" selection-end-column="7" />
+        <state relative-caret-position="-94" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1209" column="30" selection-start-line="1209" selection-start-column="30" selection-end-line="1209" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/components/ProductBreadcrumbBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/Breadcrumb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/hello.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/login/reset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/module/base/frontpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/module/base/models/PagesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/module/base/models/Pages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/repository/TokenRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/module/base/models/PagesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#736#737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -1019,76 +1031,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/MvcConfig.java">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/PageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/DefaultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="382">
+          <caret line="111" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="118" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.6.RELEASE/spring-boot-autoconfigure-1.5.6.RELEASE.jar!/org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="263" column="44" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="27" selection-start-line="14" selection-start-column="3" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/user/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="374">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/user/add.html">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/static/cdn/js/admin-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/admin/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="29" selection-end-column="27" />
+          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/page.html">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="498">
+          <caret line="108" column="62" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/resources/templates/admin/base/admin.html">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/domain/ResponseBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>

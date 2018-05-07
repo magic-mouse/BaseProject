@@ -9,7 +9,8 @@ angular.module('admin', [])
             });
     })
     .controller('adminadd', function ($scope, $http) {
-        console.log("World");
+
+
         $scope.createUser = function(){
             console.log("Hello", $scope.user );
             $http.post('/api/users/create', $scope.user);
@@ -36,5 +37,14 @@ angular.module('password', [])
             });
         }
 
+
+    });
+
+angular.module('base', [])
+    .controller('baseadd', function ($scope, $http) {
+
+        $scope.createBase = function(){
+            console.log($scope.page);
+        }
 
     });
