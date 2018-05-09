@@ -11,8 +11,13 @@ import java.util.List;
 @Service
 public class UserRoleService {
 
-    @Autowired
+
     UserRolesRepository userRolesRepository;
+
+    public UserRoleService(@Autowired
+                                   UserRolesRepository userRolesRepository) {
+        this.userRolesRepository = userRolesRepository;
+    }
 
     public UserRole save(UserRole userRole)
     {

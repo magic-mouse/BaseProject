@@ -1,14 +1,11 @@
 package com.github.dronezcc.riser.gui.controller;
 
-import com.github.dronezcc.riser.gui.module.base.models.Pages;
 import com.github.dronezcc.riser.gui.module.base.models.PagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import java.util.List;
 
 @Configuration
 @EnableWebSecurity

@@ -1,17 +1,14 @@
 package com.github.dronezcc.riser.gui.model;
 
-import org.springframework.context.annotation.Bean;
-
-import java.util.List;
 import java.util.Map;
 
 
 public class ApiUser {
 
-    String username;
-    String email;
-    boolean active;
-    Map<String, String> roles;
+    private String username;
+    private String email;
+    private boolean active;
+    private Map<String, String> roles;
 
     public ApiUser() {
     }

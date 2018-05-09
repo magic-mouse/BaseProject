@@ -2,8 +2,8 @@ package com.github.dronezcc.riser.gui.model;
 
 public class Roles {
 
-    String role_admin;
-    String role_user;
+    private String role_admin;
+    private String role_user;
 
     public Roles() {
     }

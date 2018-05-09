@@ -3,15 +3,12 @@ package com.github.dronezcc.riser.gui.controller.admin;
 import com.github.dronezcc.riser.gui.components.ProductBreadcrumbBuilder;
 import com.github.dronezcc.riser.gui.domain.Breadcrumb;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Controller
 @RequestMapping("/admin/base")

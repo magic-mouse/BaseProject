@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      ng-app="base">
 <head>
     <div th:include="top :: header" th:remove="tag"></div>
     <title>Spring Security Example</title>
+    <script src="/cdn/js/admin-controller.js"></script>
 </head>
-<body>
+<body ng-controller="baseadmin">
 <div th:include="top :: menu" th:remove="tag"></div>
 
 <div class="container-fluid">
@@ -23,7 +25,14 @@
     <div class="col-sm-10">
         <h1>Page Admin</h1>
 
-
+<table class="table">
+    <tr ng-repeat="pd in pagesData">
+        <!--<td>{{pd}}</td>-->
+        <td><a ng-href="/p/{{pd.path}}">{{pd.headline}}</a></td>
+        <td><a ng-href="/admin/base/edit/{{pd.path}}"><b class="glyphicon glyphicon-pencil"></b></a></td>
+        <td><a ng-href="/admin/base/delete/{{pd.path}}"><b class="glyphicon glyphicon-trash"></b></a></td>
+    </tr>
+</table>
 
 
     </div>

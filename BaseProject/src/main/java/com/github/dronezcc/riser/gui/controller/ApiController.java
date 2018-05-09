@@ -4,6 +4,8 @@ import com.github.dronezcc.riser.gui.domain.ResponseBase;
 import com.github.dronezcc.riser.gui.domain.User;
 import com.github.dronezcc.riser.gui.domain.UserRole;
 import com.github.dronezcc.riser.gui.model.ApiUser;
+import com.github.dronezcc.riser.gui.module.base.models.Pages;
+import com.github.dronezcc.riser.gui.module.base.models.PagesService;
 import com.github.dronezcc.riser.gui.services.UserRoleService;
 import com.github.dronezcc.riser.gui.services.UserService;
 import org.slf4j.Logger;
@@ -19,23 +21,25 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
 public class ApiController {
 
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
-    private UserService userService;
-    private UserRoleService userRoleService;
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    private final UserService userService;
+    private final UserRoleService userRoleService;
+    private final PagesService pagesService;
 
 
-    public ApiController(@Autowired UserService userService, @Autowired UserRoleService userRoleService) {
+    public ApiController(@Autowired UserService userService,
+                         @Autowired UserRoleService userRoleService,
+                         @Autowired PagesService pagesService) {
         this.userRoleService = userRoleService;
         this.userService = userService;
+        this.pagesService = pagesService;
     }
 
 
@@ -45,8 +49,8 @@ public class ApiController {
         return userService.findAll();
     }
 
-    @RequestMapping("/api/secret_password")
-    public void secretPassword(@RequestParam("password") String password, @RequestParam("name") String name) throws Exception {
+    @RequestMapping("/secret_password")
+    public void secretPassword(@RequestParam("password") String password, @RequestParam("name") String name) {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         String encoded_pass = bCryptPasswordEncoder.encode(password);
 
@@ -58,19 +62,19 @@ public class ApiController {
 
     @RequestMapping(value = "/users/create", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public User newUser(@RequestBody ApiUser apiUser) throws Exception {
+    public User newUser(@RequestBody ApiUser apiUser) {
 
         log.debug(apiUser.toString());
 
         User user = new User();
         user.setEmail(apiUser.getEmail());
         user.setUserName(apiUser.getUsername());
-        user.setEnabled(apiUser.isActive()?1:0);
+        user.setEnabled(apiUser.isActive() ? 1 : 0);
         User savedUser = userService.save(user);
 
 
         apiUser.getRoles().forEach((key, val) -> {
-            if(val.equals("false")) return;
+            if (val.equals("false")) return;
 
             UserRole ur = new UserRole();
             ur.setUserid(savedUser.getUserid());
@@ -83,7 +87,7 @@ public class ApiController {
 
     @RequestMapping(value = "/users/set_password", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public ResponseEntity<?> updatePassword(@RequestParam("oldpassword") String oldPassword, @RequestParam("password") String password) throws Exception {
+    public ResponseEntity<?> updatePassword(@RequestParam("oldpassword") String oldPassword, @RequestParam("password") String password) {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
         String encoded_pass = bCryptPasswordEncoder.encode(password);
@@ -104,9 +108,30 @@ public class ApiController {
         }
     }
 
-    @RequestMapping(value="/base/add", method= RequestMethod.POST)
+    @RequestMapping(value = "/base", method = RequestMethod.GET)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> updateBase(@RequestBody ResponseBase responseBase){
+    public ResponseEntity<?> updateBase() {
+        List<Pages> pagesList = pagesService.getAllPages();
+        return new ResponseEntity<>(pagesList, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/base/add", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> updateBase(@RequestBody ResponseBase responseBase) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String name = auth.getName();
+
+        Pages page = new Pages();
+
+        page.setContent(responseBase.getContent());
+        page.setPath(responseBase.getPath());
+        page.setHeadline(responseBase.getPage_name());
+        page.setAuthor(name);
+        Pages pReturn = pagesService.save(page);
+
+
+        return new ResponseEntity<>(pReturn, HttpStatus.OK);
 
     }
 }

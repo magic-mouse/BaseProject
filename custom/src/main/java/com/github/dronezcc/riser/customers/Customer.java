@@ -7,11 +7,11 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private int id;
     @Column
-    String name;
+    private String name;
     @Column
-    String address;
+    private String address;
 
     @Override
     public String toString() {

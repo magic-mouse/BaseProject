@@ -14,7 +14,6 @@ import java.util.Properties;
 public class MailSendingService {
 
     private JavaMailSender mailSender;
-    private SimpleMailMessage templateMessage;
 
     @Value("${application.mail.host}")
     private String host;
@@ -25,8 +24,9 @@ public class MailSendingService {
     @Value("${application.mail.password}")
     private String password;
 
-    public JavaMailSenderImpl getJavaMailSender() {
+    private JavaMailSenderImpl getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+
         mailSender.setHost(host);
         mailSender.setPort(port);
         mailSender.setUsername(userName);
@@ -46,7 +46,6 @@ public class MailSendingService {
     }
 
     public void setTemplateMessage(SimpleMailMessage templateMessage) {
-        this.templateMessage = templateMessage;
     }
 
 

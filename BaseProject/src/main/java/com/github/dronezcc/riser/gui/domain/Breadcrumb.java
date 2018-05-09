@@ -2,8 +2,8 @@ package com.github.dronezcc.riser.gui.domain;
 
 public class Breadcrumb {
 
-    private String url;
-    private String name;
+    private final String url;
+    private final String name;
 
     public Breadcrumb(final String url, final String name) {
         this.url = url;

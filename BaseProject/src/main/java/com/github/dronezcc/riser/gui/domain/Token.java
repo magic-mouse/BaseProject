@@ -7,10 +7,13 @@ public class Token {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private
     Long identity;
     @Column
+    private
     String validTo;
     @Column
+    private
     long userId;
 
     public Token() {

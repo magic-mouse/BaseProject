@@ -7,28 +7,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class ValidatorService {
 
-    @Autowired
-    UserService userService;
+    private final UserService userService;
+
+    public ValidatorService(@Autowired UserService userService ){
+        this.userService = userService;
+    }
 
     public boolean validatEmail(String email) {
         // TODO: Expand this validation!
-        if(email.contains("@")){
-            return true;
-        }
-
-
-        return false;
+        return email.contains("@");
     }
 
     public boolean emailExists(String email) {
-
         User user = userService.findByEmail(email);
-
-        if(user != null){
-            return true;
-        }
-
-        return false;
-
+        return user != null;
     }
 }

@@ -9,9 +9,12 @@ import java.util.List;
 @Service
 public class PagesService {
 
-    @Autowired
-    PagesRepository pagesRepository;
 
+    private final PagesRepository pagesRepository;
+
+    public PagesService(@Autowired PagesRepository pagesRepository) {
+        this.pagesRepository = pagesRepository;
+    }
 
     public Pages getPage(String p) {
         return pagesRepository.findByPath(p);
@@ -24,9 +27,7 @@ public class PagesService {
     public List<Pages> getAllPages() {
         List<Pages> pagesList = new ArrayList<>();
         Iterable<Pages> allPages = pagesRepository.findAll();
-
-        allPages.forEach(c -> pagesList.add(c));
-
+        allPages.forEach(pagesList::add);
         return pagesList;
     }
 }

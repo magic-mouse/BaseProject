@@ -7,21 +7,27 @@ public class Pages {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private
     int id;
 
     @Column
+    private
     String headline;
 
     @Column
+    private
     String path;
 
     @Column(columnDefinition = "TEXT")
+    private
     String content;
 
     @Column
+    private
     String author;
 
     @Column
+    private
     String template;
 
     public Pages() {

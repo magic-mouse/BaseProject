@@ -45,6 +45,23 @@ angular.module('base', [])
 
         $scope.createBase = function(){
             console.log($scope.page);
+            $http.post("/api/base/add", $scope.page).then(function (data){
+                console.log(data);
+                $scope.error = null;
+                $scope.success = "";
+            }, function(response){
+                console.log(response, response.data, response.status, response.statusText);
+                $scope.success = null;
+                $scope.error = "something went wrong, please review your input and try again";
+            });
         }
 
-    });
+    }) .controller('baseadmin', function ($scope, $http) {
+
+        $scope.pagesData = {};
+
+        $http.get('/api/base').then(function (data) {
+            $scope.pagesData = data.data;
+            console.log($scope.pagesData);
+        });
+});

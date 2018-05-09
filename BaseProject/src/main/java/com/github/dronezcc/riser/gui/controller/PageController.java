@@ -5,31 +5,27 @@ import com.github.dronezcc.riser.gui.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.*;
 
 @Controller
 public class PageController {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
-    private ReCaptchaService reCaptchaService;
-    private UserService userService;
-    private UserRoleService userRoleService;
-    private ValidatorService validatorService;
-    private MailSendingService mailSendingService;
-    private MailTokenService mailTokenService;
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    private final ReCaptchaService reCaptchaService;
+    private final UserService userService;
+    private final UserRoleService userRoleService;
+    private final ValidatorService validatorService;
+    private final MailSendingService mailSendingService;
+    private final MailTokenService mailTokenService;
 
 
     public PageController(@Autowired ReCaptchaService reCaptchaService,
@@ -54,9 +50,7 @@ public class PageController {
       if(!mailTokenService.findByToken(token)){
           return "redirect:/404";
       }
-
       return "login/reset";
-
     }
 
     @RequestMapping(value = "/login/validate", method = RequestMethod.POST)
@@ -79,6 +73,8 @@ public class PageController {
             return "redirect:/login/splash-error";
         }
 
+        log.debug("this is email {}",email);
+
         System.out.println(email);
         Long uid = userService.getUserIdFromEmail(email);
         System.out.println(uid);
@@ -93,6 +89,10 @@ public class PageController {
     @RequestMapping("/user")
     @PreAuthorize("hasRole('ROLE_USER')")
     public String showUser(Model model) {
+
+        System.out.println("HELLO HELLO HELLOE");
+
+        log.info("this is email {}","test");
 
         User user = null;
         List<String> userRole = null;
@@ -117,6 +117,8 @@ public class PageController {
 
         return "user/user";
     }
+
+
 
 //
 

@@ -10,15 +10,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.jws.Oneway;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -28,10 +24,10 @@ import java.util.List;
 @PreAuthorize("hasRole('ROLE_ADMIN')")
 public class UserController {
 
-    Logger log = LoggerFactory.getLogger(this.getClass());
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    UserService userService;
-    UserRoleService  userRoleService;
+    private final UserService userService;
+    private final UserRoleService  userRoleService;
 
     public UserController(@Autowired UserService userService, @Autowired UserRoleService userRoleService){
         this.userService = userService;
