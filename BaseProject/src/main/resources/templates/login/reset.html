@@ -12,10 +12,14 @@
 <div class="container-fluid">
     <div class="starter-template">
 
-        <label for="password">Set new password</label>
-        <input type="password" id="password" name="password" class="form-control"/>
+        <form action="/login/reset/save" method="post">
 
+            <input type="hidden" name="id" id="id" th:value="${id}" />
+            <label for="password">Set new password</label>v
+            <input type="password" id="password" name="password" class="form-control"/>
+            <input type="submit" class="btn btn-primary" />
 
+        </form>
 
     </div>
 </div>

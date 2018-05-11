@@ -38,4 +38,13 @@ public class UserService {
         User uid = userRepository.findByEmail(email);
         return uid.getUserid();
     }
+
+    public User findById(String uid) {
+        Long uidl = Long.parseLong(uid);
+       return this.findById(uid);
+    }
+
+    public User findById(long userId) {
+        return userRepository.findOne(userId);
+    }
 }

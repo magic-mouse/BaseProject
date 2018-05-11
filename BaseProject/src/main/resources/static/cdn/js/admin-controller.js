@@ -8,12 +8,17 @@ angular.module('admin', [])
                 $scope.userdata = data.data;
             });
     })
-    .controller('adminadd', function ($scope, $http) {
-
-
+    .controller('adminadd', function ($scope, $http, $window) {
         $scope.createUser = function(){
-            console.log("Hello", $scope.user );
-            $http.post('/api/users/create', $scope.user);
+
+            $http.post('/api/users/create', $scope.user).then(
+                function(data){
+                    $window.location.href = '/admin/user/' + data.data.userName;
+                },
+                function (error){
+                    console.log(error);
+                }
+            );
         }
 
 
@@ -64,4 +69,15 @@ angular.module('base', [])
             $scope.pagesData = data.data;
             console.log($scope.pagesData);
         });
+    });
+
+angular.module('menu', [])
+ .controller('menuadmin', function ($scope, $http) {
+
+    $scope.menuData = {};
+
+    $http.get('/api/menu').then(function (data) {
+        $scope.menuData = data.data;
+        console.log($scope.menuData);
+    });
 });

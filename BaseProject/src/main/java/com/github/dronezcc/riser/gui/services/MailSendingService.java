@@ -1,6 +1,9 @@
 package com.github.dronezcc.riser.gui.services;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
@@ -13,34 +16,10 @@ import java.util.Properties;
 @Service
 public class MailSendingService {
 
+    private Logger log = LoggerFactory.getLogger(this.getClass());
     private JavaMailSender mailSender;
 
-    @Value("${application.mail.host}")
-    private String host;
-    @Value("${application.mail.port}")
-    private int port;
-    @Value("${application.mail.username")
-    private String userName;
-    @Value("${application.mail.password}")
-    private String password;
-
-    private JavaMailSenderImpl getJavaMailSender() {
-        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-
-        mailSender.setHost(host);
-        mailSender.setPort(port);
-        mailSender.setUsername(userName);
-        mailSender.setPassword(password);
-
-        Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.transport.protocol", "smtp");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.debug", "true");
-
-        return mailSender;
-    }
-
+    @Autowired
     public void setMailSender(JavaMailSender mailSender) {
         this.mailSender = mailSender;
     }
@@ -48,9 +27,8 @@ public class MailSendingService {
     public void setTemplateMessage(SimpleMailMessage templateMessage) {
     }
 
-
     public void sendPasswordResetMail(String email, String link, String token) {
-        this.mailSender = getJavaMailSender();
+
 
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo(email);
@@ -61,8 +39,7 @@ public class MailSendingService {
             this.mailSender.send(msg);
         }
         catch (MailException ex) {
-            // simply log it and go on...
-            System.err.println(ex.getMessage());
+            log.error(ex.getMessage(),ex);
         }
 
     }

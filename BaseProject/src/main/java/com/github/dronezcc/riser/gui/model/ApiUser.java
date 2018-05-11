@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class ApiUser {
 
+    private Long id;
     private String username;
     private String email;
     private boolean active;
@@ -12,6 +13,7 @@ public class ApiUser {
 
     public ApiUser() {
     }
+
 
     public String getUsername() {
         return username;
@@ -53,5 +55,13 @@ public class ApiUser {
                 ", active=" + active +
                 ", roles=" + roles +
                 '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

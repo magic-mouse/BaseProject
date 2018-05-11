@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.gui.security;
+package com.github.dronezcc.riser.gui.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

@@ -25,16 +25,16 @@
         </ol>
     </div>
     <div class="col-sm-10">
-        <h1>Userdata</h1>
+        <h1>Userdata <small><a th:href="${'/admin/user/edit/' + {uid}}">Edit</a></small></h1>
         <table class="table table-striped">
-            <tr><td><label>Username:</label></td><td> <span th:text="${userName}"></span></td><td></td></tr>
-            <tr><td><label>Roles:</label></td><td> <span th:text="${userRole}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
-            <tr><td><label>Email:</label></td><td> <span th:text="${email}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
-            <tr><td><label>Activated:</label></td><td> <span th:text="${active}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
+            <tr><td><label>Username:</label></td><td><span th:text="${userName}"></span></td></tr>
+            <tr><td><label>Roles:</label></td><td> <span th:text="${userRole}"></span></td></tr>
+            <tr><td><label>Email:</label></td><td> <span th:text="${email}" ></span></td></tr>
+            <tr><td><label>Activated:</label></td><td> <span th:text="${active}"></span></td></tr>
         </table>
 
     </div>
 </div>
 
-</body>
+</body>3ö
 </html>

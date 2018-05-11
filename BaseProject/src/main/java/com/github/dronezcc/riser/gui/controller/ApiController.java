@@ -1,11 +1,13 @@
 package com.github.dronezcc.riser.gui.controller;
 
+import com.github.dronezcc.riser.gui.domain.MenuItem;
 import com.github.dronezcc.riser.gui.domain.ResponseBase;
 import com.github.dronezcc.riser.gui.domain.User;
 import com.github.dronezcc.riser.gui.domain.UserRole;
 import com.github.dronezcc.riser.gui.model.ApiUser;
-import com.github.dronezcc.riser.gui.module.base.models.Pages;
-import com.github.dronezcc.riser.gui.module.base.models.PagesService;
+import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
+import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
+import com.github.dronezcc.riser.gui.services.MenuService;
 import com.github.dronezcc.riser.gui.services.UserRoleService;
 import com.github.dronezcc.riser.gui.services.UserService;
 import org.slf4j.Logger;
@@ -21,6 +23,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.List;
 
 @RestController
@@ -32,14 +36,17 @@ public class ApiController {
     private final UserService userService;
     private final UserRoleService userRoleService;
     private final PagesService pagesService;
+    private final MenuService menuService;
 
 
     public ApiController(@Autowired UserService userService,
                          @Autowired UserRoleService userRoleService,
-                         @Autowired PagesService pagesService) {
+                         @Autowired PagesService pagesService,
+                         @Autowired MenuService menuService) {
         this.userRoleService = userRoleService;
         this.userService = userService;
         this.pagesService = pagesService;
+        this.menuService = menuService;
     }
 
 
@@ -62,27 +69,40 @@ public class ApiController {
 
     @RequestMapping(value = "/users/create", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public User newUser(@RequestBody ApiUser apiUser) {
+    public ResponseEntity<?> newUser(@RequestBody ApiUser apiUser) {
+
+        ObjectMapper mapper = new ObjectMapper();
 
         log.debug(apiUser.toString());
 
         User user = new User();
+        if (apiUser.getId() != null) {
+            user.setUserid(apiUser.getId());
+        }
         user.setEmail(apiUser.getEmail());
         user.setUserName(apiUser.getUsername());
         user.setEnabled(apiUser.isActive() ? 1 : 0);
-        User savedUser = userService.save(user);
+
+        User savedUser;
+
+        try {
+            savedUser = userService.save(user);
+        } catch (Exception e) {
+            log.error("Saved somthing wrong", e);
+            return new ResponseEntity<String>("{message: \"there was an error\", stacktrace: \"" + e.getMessage() + "\"}", HttpStatus.CONFLICT);
+        }
+        if (apiUser.getRoles() != null && apiUser.getRoles().size() > 0) {
+            apiUser.getRoles().forEach((key, val) -> {
+                if (val.equals("false")) return;
+                UserRole ur = new UserRole();
+                ur.setUserid(savedUser.getUserid());
+                ur.setRole(val);
+                userRoleService.save(ur);
+            });
+        }
 
 
-        apiUser.getRoles().forEach((key, val) -> {
-            if (val.equals("false")) return;
-
-            UserRole ur = new UserRole();
-            ur.setUserid(savedUser.getUserid());
-            ur.setRole(val);
-            userRoleService.save(ur);
-        });
-
-        return savedUser;
+            return new ResponseEntity<User>(savedUser, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/users/set_password", method = RequestMethod.POST)
@@ -112,6 +132,13 @@ public class ApiController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> updateBase() {
         List<Pages> pagesList = pagesService.getAllPages();
+        return new ResponseEntity<>(pagesList, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/menu", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> getMenu() {
+        List<MenuItem> pagesList = menuService.getAll();
         return new ResponseEntity<>(pagesList, HttpStatus.OK);
     }
 

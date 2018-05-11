@@ -10,6 +10,8 @@ import java.util.List;
 @RestController
 public class OpenController {
 
+
+
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping("/api/open")
     public List<String> openApi(){

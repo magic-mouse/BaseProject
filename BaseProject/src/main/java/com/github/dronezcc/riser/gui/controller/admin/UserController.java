@@ -42,6 +42,17 @@ public class UserController {
         return "admin/user/add";
     }
 
+    @RequestMapping("/edit/{uid}")
+    public String editUser(Model model, HttpServletRequest request, @PathVariable String uid) {
+        User user = userService.findById(uid);
+
+        List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
+        model.addAttribute("breadCrumb", collect );
+        model.addAttribute("user", user);
+        model.addAttribute("edit_mode", true);
+        return "admin/user/add";
+    }
+
     @RequestMapping(path = {"/", ""})
     public String users(Model model, HttpServletRequest request) {
         List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
@@ -63,14 +74,12 @@ public class UserController {
         } catch (Exception err) {
             log.error("could not find logged in user!");
         }
-        String userName = user.getUserName();
-        String email = user.getEmail();
-        int active = user.getEnabled();
 
-        model.addAttribute("userName", userName);
-        model.addAttribute("email", email);
+        model.addAttribute("uid", user.getUserid());
+        model.addAttribute("userName", user.getUserName());
+        model.addAttribute("email", user.getEmail());
         model.addAttribute("userRole", userRole);
-        model.addAttribute("active", active);
+        model.addAttribute("active", user.getEnabled());
 
         return "user/user";
     }

@@ -1,7 +1,7 @@
 package com.github.dronezcc.riser.gui.controller;
 
-import com.github.dronezcc.riser.gui.module.base.models.Pages;
-import com.github.dronezcc.riser.gui.module.base.models.PagesService;
+import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
+import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

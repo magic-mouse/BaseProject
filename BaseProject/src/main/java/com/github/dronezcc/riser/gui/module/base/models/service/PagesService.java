@@ -1,5 +1,7 @@
-package com.github.dronezcc.riser.gui.module.base.models;
+package com.github.dronezcc.riser.gui.module.base.models.service;
 
+import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
+import com.github.dronezcc.riser.gui.module.base.models.repository.PagesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +31,10 @@ public class PagesService {
         Iterable<Pages> allPages = pagesRepository.findAll();
         allPages.forEach(pagesList::add);
         return pagesList;
+    }
+
+    public void deleteById(Integer id) {
+        Pages pages = pagesRepository.findOne(id);
+        pagesRepository.delete(pages);
     }
 }

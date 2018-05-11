@@ -1,6 +1,6 @@
 package com.github.dronezcc.riser.gui.controller;
 
-import com.github.dronezcc.riser.gui.module.base.models.PagesService;
+import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

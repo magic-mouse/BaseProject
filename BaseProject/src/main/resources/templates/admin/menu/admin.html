@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
-      ng-app="base">
+      ng-app="menu">
 <head>
     <div th:include="top :: header" th:remove="tag"></div>
     <title>Spring Security Example</title>
     <script src="/cdn/js/admin-controller.js"></script>
 </head>
-<body ng-controller="baseadmin">
+<body ng-controller="menuadmin">
 <div th:include="top :: menu" th:remove="tag"></div>
 
 <div class="container-fluid">
     <div class="col-sm-2">
         <ul class="nav nav-pills nav-stacked">
-            <li role="presentation"><a href="/admin/base">Home</a></li>
-            <li role="presentation"><a href="/admin/base/add">New page</a></li>
+            <li role="presentation"><a href="/admin/menu">Home</a></li>
+            <li role="presentation"><a href="/admin/menu/add">New Menu</a></li>
         </ul>
     </div>
     <div class="col-sm-10">
@@ -26,11 +26,11 @@
         <h1>Page Admin</h1>
 
 <table class="table">
-    <tr ng-repeat="pd in pagesData">
+    <tr ng-repeat="md in menuData">
         <!--<td>{{pd}}</td>-->
-        <td><a ng-href="/p/{{pd.path}}">{{pd.headline}}</a></td>
-        <td><a ng-href="/admin/base/edit/{{pd.id}}"><b class="glyphicon glyphicon-pencil"></b></a></td>
-        <td><a ng-href="/admin/base/delete/{{pd.id}}"><b class="glyphicon glyphicon-trash"></b></a></td>
+        <td><a ng-href="/p/{{md.path}}">{{md.headline}}</a></td>
+        <td><a ng-href="/admin/menu/edit/{{md.id}}"><b class="glyphicon glyphicon-pencil"></b></a></td>
+        <td><a ng-href="/admin/menu/delete/{{md.id}}"><b class="glyphicon glyphicon-trash"></b></a></td>
     </tr>
 </table>
 

@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.gui.module.base.models;
+package com.github.dronezcc.riser.gui.module.base.models.domain;
 
 import javax.persistence.*;
 

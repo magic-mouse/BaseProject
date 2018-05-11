@@ -1,5 +1,7 @@
 package com.github.dronezcc.riser.customers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Controller;
@@ -9,13 +11,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @EnableWebSecurity
-@RequestMapping("/costumers")
+@RequestMapping("/customers")
 public class CustomersController {
+
+    Logger log = LoggerFactory.getLogger(this.getClass());
+
+    @RequestMapping(value = {"", "/"})
+    public String redirectToCustomers(){
+        return "redirect:/customers/main/resources/customers";
+    }
+
 
     @RequestMapping("/main/resources/customers")
     @PreAuthorize("hasRole('ROLE_USER')")
-    @ResponseBody
     public String showCustomer(Model model) {
+
+
+
+        model.addAttribute("template", "top");
+
          return "customers/customers";
     }
 
@@ -26,6 +40,6 @@ public class CustomersController {
     {
 
         model.addAttribute("page", "this is the content of the \"costumers/add\" page");
-        return "page";
+        return "customers/add";
     }
 }

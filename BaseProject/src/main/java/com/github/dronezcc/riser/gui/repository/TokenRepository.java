@@ -4,7 +4,12 @@ import com.github.dronezcc.riser.gui.domain.Token;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.UUID;
+
 @Repository
-public interface TokenRepository extends CrudRepository<Token, Long>{
-    Token findByIdentity(Long token);
+public interface TokenRepository extends CrudRepository<Token, UUID>{
+    Token findByIdentity(UUID token);
+
+    List<Token> findByUserIdAndUsed(long userId, boolean used);
 }
