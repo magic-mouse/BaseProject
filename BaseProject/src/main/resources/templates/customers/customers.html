@@ -11,7 +11,17 @@
 <div class="container-fluid">
     <div class="starter-template">
         <h1>Customers</h1>
+        <div th:include="module/customers/top :: customers_menu" th:remove="tag"></div>
 
+        <table class="table table-striped">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Phonenumber</td>
+                <td>Notes</td>
+            </tr>
+        </table>
 
     </div>
 </div>

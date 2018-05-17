@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.customers;
+package com.github.dronezcc.riser.gui.customers;
 
 import javax.persistence.*;
 

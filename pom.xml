@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>custom</module>
         <module>BaseProject</module>
     </modules>
 

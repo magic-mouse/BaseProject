@@ -1,4 +1,4 @@
-package com.github.dronezcc.riser.customers;
+package com.github.dronezcc.riser.gui.customers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @EnableWebSecurity
@@ -25,12 +24,8 @@ public class CustomersController {
     @RequestMapping("/main/resources/customers")
     @PreAuthorize("hasRole('ROLE_USER')")
     public String showCustomer(Model model) {
-
-
-
         model.addAttribute("template", "top");
-
-         return "customers/customers";
+        return "customers";
     }
 
 
@@ -38,8 +33,8 @@ public class CustomersController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String addCustomer(Model model)
     {
-
+        log.info("this is it");
         model.addAttribute("page", "this is the content of the \"costumers/add\" page");
-        return "customers/add";
+        return "templates/customers/add";
     }
 }
