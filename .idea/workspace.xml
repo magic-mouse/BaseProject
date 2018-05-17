@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d9c242b-2d41-4c5d-8d3c-56dce45d3083" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/customers/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/customers/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/custom.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/customers.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/github/dronezcc/riser/customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/customers/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/src/main/java/com/github/dronezcc/riser/customers/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/customers/CustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/src/main/resources/customers/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/customers/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/src/main/resources/customers/customers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/src/main/resources/customers/top.html" beforeDir="false" afterPath="$PROJECT_DIR$/BaseProject/src/main/resources/templates/customers/top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/github/dronezcc/riser/customers/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/classes/com/github/dronezcc/riser/customers/CustomersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/classes/customers/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/classes/customers/customers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/classes/customers/top.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/customers-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/this-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/this-framework.iml" afterDir="false" />
-    </list>
+    <list default="true" id="0d9c242b-2d41-4c5d-8d3c-56dce45d3083" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/BaseProject/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomersController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomersController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/customers/CustomersController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -58,10 +25,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BaseProject/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="GuiApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="153">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -127,8 +104,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,90 +119,10 @@
               <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
               <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="this-framework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="BaseProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,15 +212,15 @@
       <workItem from="1526500921884" duration="134000" />
       <workItem from="1526553795751" duration="58000" />
       <workItem from="1526553857921" duration="7000" />
+      <workItem from="1526555523248" duration="1332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2885000" />
+    <option name="totallyTimeSpent" value="4217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -341,10 +239,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3008658" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1424" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32900432" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.144" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -365,6 +263,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/customers/CustomersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/customers/CustomersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -454,7 +372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseProject/src/main/java/com/github/dronezcc/riser/gui/GuiApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="153">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -471,6 +389,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseProject/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
