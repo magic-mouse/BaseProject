@@ -11,7 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gui" target="1.8" />
-      <module name="this-framework" target="1.5" />
+      <module name="this-framework" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
