@@ -46,7 +46,11 @@ public class User implements Serializable {
 
 	public void setEnabled(int enabled) {
 		this.enabled = enabled;
-	}	
+	}
+
+	public void setEnabled(Boolean enabled){
+		this.enabled = (enabled) ? 1:0;
+	}
 
 	public Long getUserid() {
 		return userId;

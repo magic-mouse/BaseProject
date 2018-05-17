@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gui" />
+        <module name="this-framework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gui" target="1.8" />
-      <module name="this-framework" target="1.6" />
+      <module name="this-framework" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
