@@ -36,3 +36,5 @@ mail:
     starttls:
       enable: true
   debug: true
+logging:
+  file: /var/log/base_project/application.log
