@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+<html layout:decorate="~{task/layout}"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
       ng-app="base">
 <head>
-    <div th:include="top :: header" th:remove="tag"></div>
     <title>Spring Security Example</title>
     <script src="/cdn/js/admin-controller.js"></script>
 </head>
 <body ng-controller="baseadmin">
-<div th:include="top :: menu" th:remove="tag"></div>
 
-<div class="container-fluid">
+<div layout:fragment="content">
+    <div class="row">
     <div class="col-sm-2">
         <ul class="nav nav-pills nav-stacked">
             <li role="presentation"><a href="/admin/base">Home</a></li>
@@ -35,6 +34,7 @@
 </table>
 
 
+    </div>
     </div>
 </div>
 </body>

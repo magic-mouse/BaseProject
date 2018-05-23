@@ -25,7 +25,7 @@ public class CustomersController {
     @PreAuthorize("hasRole('ROLE_USER')")
     public String showCustomer(Model model) {
         model.addAttribute("template", "top");
-        return "customers";
+        return "customers/customers";
     }
 
 

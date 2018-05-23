@@ -1,5 +1,6 @@
 package com.github.dronezcc.riser.gui.controller;
 
+import com.github.dronezcc.riser.gui.domain.Task;
 import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
 import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -20,6 +23,30 @@ public class DefaultController {
     public String showFrontpage(Model model) {
          return "module/base/frontpage";
     }
+
+    @RequestMapping("/task/test")
+    public String taskTest(Model m){
+
+        Task t = new Task();
+
+        t.setId(1);
+        t.setTitle("Not a title");
+        t.setText("not a text");
+        t.setDueTo("Not a due to");
+
+        List<Task> taskList = new ArrayList<>();
+
+        m.addAttribute("tasks", taskList);
+        return "/task/list";
+    }
+
+
+
+    @RequestMapping("/task/err")
+    public String taskErrTest(){
+        return "/error";
+    }
+
 
     @RequestMapping("/p/hello")
     public Pages makePage(){

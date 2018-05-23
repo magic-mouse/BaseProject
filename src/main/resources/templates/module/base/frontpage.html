@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+<html layout:decorate="~{task/layout}"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-    <div th:include="top :: header" th:remove="tag"></div>
-    <title>Spring Security Example</title>
+    <title>Frontpage</title>
 </head>
 <body>
-<div th:include="top :: menu" th:remove="tag"></div>
 
-<div class="container-fluid">
-    <div class="starter-template">
+
+<div layout:fragment="content">
+    <div class="row">
+    <div class="col-sm-12">
         <h1>Page</h1>
+
+
 
         <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
 
+        <div th:if="${#request.isUserInRole('ADMIN')}">
+            <h2>This will only be displayed if authenticated user has role ROLE_ADMIN.</h2>
+        </div>
+
+
         Logged user: <span sec:authentication="name">Bob</span>
 
+        <div sec:authorize="hasAuthority('ADMIN')">
+
+                <h2>User Has Authority Admin</h2>
+
+        </div>
 
         <li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
+
+
 
         <div sec:authentication="name">
             The value of the "name" property of the authentication object should appear here.
@@ -25,11 +39,12 @@
 
         <div sec:authorize="hasAuthority('USER')"> Has Authority USER</div>
 
-        <div sec:authorize="hasRole('ROLE_USER')">
+        <div sec:authorize="hasRole('ROLE_ADMIN')">
             This content is only shown to administrators.
         </div>
 
         <a href="/api/open" about="">Open API</a>
+    </div>
     </div>
 </div>
 </body>
