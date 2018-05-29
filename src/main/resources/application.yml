@@ -12,7 +12,7 @@ spring:
     database: MYSQL
     database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate.ddl-auto: update
-    show-sql: true
+    show-sql: false
 
 server:
   port: 8080
@@ -36,5 +36,8 @@ mail:
     starttls:
       enable: true
   debug: true
+
 logging:
   file: /var/log/base_project/application.log
+  level:
+    com.github.dronezcc.riser.gui: debug

@@ -20,7 +20,7 @@ import java.util.List;
 @RequestMapping("/admin/base")
 public class BaseController {
 
-    PagesService pagesService;
+    private final PagesService pagesService;
 
     public BaseController(@Autowired PagesService pagesService){
         this.pagesService = pagesService;

@@ -14,26 +14,27 @@ public class MenuItem {
     String value;
     @Column
     int weight;
+    @Column
+    String justNote;
 
-
+    public MenuItem() {
+    }
 
     public int getId() {
         return id;
-    }
-
-
-    public void setLocation(String location) {
-        this.loation = loation;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getLoation() {
+    public String getLocation() {
         return loation;
     }
 
+    public void setLocation(String loation) {
+        this.loation = loation;
+    }
 
     public String getValue() {
         return value;
@@ -49,5 +50,24 @@ public class MenuItem {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getJustNote() {
+        return justNote;
+    }
+
+    public void setJustNote(String justNote) {
+        this.justNote = justNote;
+    }
+
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                "id=" + id +
+                ", loation='" + loation + '\'' +
+                ", value='" + value + '\'' +
+                ", weight=" + weight +
+                ", justNote='" + justNote + '\'' +
+                '}';
     }
 }

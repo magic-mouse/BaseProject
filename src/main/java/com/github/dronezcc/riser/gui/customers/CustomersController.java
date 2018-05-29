@@ -35,6 +35,6 @@ public class CustomersController {
     {
         log.info("this is it");
         model.addAttribute("page", "this is the content of the \"costumers/add\" page");
-        return "templates/customers/add";
+        return "customers/add";
     }
 }

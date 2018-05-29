@@ -81,8 +81,6 @@ public class PageController {
     @RequestMapping(value = "/login/validate", method = RequestMethod.POST)
     public String validateLostPassword(@RequestParam("g-recaptcha-response") String lpv, @RequestParam("exampleInputEmail1") String email) {
 
-
-
         String link = "http://localhost:" + serverPort + "/login/reset";
 
         if (!reCaptchaService.validateService(lpv)) {

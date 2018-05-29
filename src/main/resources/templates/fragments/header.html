@@ -42,13 +42,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-                <ul class="nav navbar-nav">
-                    <li role="presentation"><a href="/">Root</a></li>
-                    <li role="presentation"><a href="/home">Home</a></li>
-                    <li role="presentation"><a href="/customers/main/resources/customers">Customers</a></li>
+                <ul class="nav navbar-nav" th:each="message : ${@messages}">
+                    <li role="presentation"><a th:href="${message.location}" th:text="${message.value}">Title ...</a></li>
                 </ul>
-
-
 
                 <ul sec:authorize="!isAuthenticated()" class="nav navbar-nav navbar-right">
                         <li role="presentation"><p class="navbar-btn"><a href="/login" class="btn btn-primary">login</a>  </p></li>
@@ -100,6 +96,8 @@
                 </ul> -->
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
+
+
     </nav>
 
 

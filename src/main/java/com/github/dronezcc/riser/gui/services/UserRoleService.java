@@ -27,4 +27,10 @@ public class UserRoleService {
     public List<String> findRoleByUserName(String name) {
         return userRolesRepository.findRoleByUserName(name);
     }
+
+    public Iterable<UserRole> findAll() {
+
+        return userRolesRepository.findAll();
+
+    }
 }

@@ -62,4 +62,8 @@ public class MailTokenService {
     public Token save(Token token) {
         return tokenRepository.save(token);
     }
+
+    public Iterable<Token> findAll() {
+        return tokenRepository.findAll();
+    }
 }

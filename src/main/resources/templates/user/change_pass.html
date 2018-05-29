@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html  layout:decorate="~{task/layout}"    xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
       ng-app="password">
@@ -10,7 +10,7 @@
 </head>
 <body ng-controller="user">
 
-<div class="container-fluid">
+<div  layout:fragment="content">
     <div class="starter-template">
         <h1>Change Password</h1>
         <div ng-cloak="" ng-show="error" class="alert alert-danger alert-dismissible" role="alert">

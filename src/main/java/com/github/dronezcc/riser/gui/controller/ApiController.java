@@ -1,12 +1,12 @@
 package com.github.dronezcc.riser.gui.controller;
 
+import com.github.dronezcc.riser.gui.domain.*;
 import com.github.dronezcc.riser.gui.domain.MenuItem;
-import com.github.dronezcc.riser.gui.domain.ResponseBase;
-import com.github.dronezcc.riser.gui.domain.User;
-import com.github.dronezcc.riser.gui.domain.UserRole;
 import com.github.dronezcc.riser.gui.model.ApiUser;
 import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
 import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
+import com.github.dronezcc.riser.gui.repository.MenuRepository;
+import com.github.dronezcc.riser.gui.services.MailTokenService;
 import com.github.dronezcc.riser.gui.services.MenuService;
 import com.github.dronezcc.riser.gui.services.UserRoleService;
 import com.github.dronezcc.riser.gui.services.UserService;
@@ -20,11 +20,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -32,14 +35,19 @@ import java.util.List;
 public class ApiController {
 
 
+
+
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private final UserService userService;
     private final UserRoleService userRoleService;
     private final PagesService pagesService;
     private final MenuService menuService;
+    private final MailTokenService tokenService;
 
 
-    public ApiController(@Autowired UserService userService,
+    public ApiController(
+            @Autowired MailTokenService tokenService,
+            @Autowired UserService userService,
                          @Autowired UserRoleService userRoleService,
                          @Autowired PagesService pagesService,
                          @Autowired MenuService menuService) {
@@ -47,6 +55,7 @@ public class ApiController {
         this.userService = userService;
         this.pagesService = pagesService;
         this.menuService = menuService;
+        this.tokenService = tokenService;
     }
 
 
@@ -135,12 +144,7 @@ public class ApiController {
         return new ResponseEntity<>(pagesList, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/menu", method = RequestMethod.GET)
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> getMenu() {
-        List<MenuItem> pagesList = menuService.getAll();
-        return new ResponseEntity<>(pagesList, HttpStatus.OK);
-    }
+
 
     @RequestMapping(value = "/base/add", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -159,6 +163,41 @@ public class ApiController {
 
 
         return new ResponseEntity<>(pReturn, HttpStatus.OK);
-
     }
+
+
+    @RequestMapping(value = "/menu", method = RequestMethod.GET)
+    public List<MenuItem> getMenu() {
+        Iterable<MenuItem> menuItems = menuService.getAll();
+        List<MenuItem> menuItemList = new ArrayList<>();
+        menuItemList.forEach(e -> menuItemList.add(e));
+        return menuItemList;
+    }
+
+    @RequestMapping(value = "/tokens", method = RequestMethod.GET)
+    public List<Token> getToken() {
+        Iterable<Token> tokens = tokenService.findAll();
+        List<Token> tokenList = new ArrayList<>();
+        tokens.forEach(e -> tokenList.add(e));
+        return tokenList;
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public List<User> getUsers() {
+        Iterable<User> users = userService.findAll();
+        List<User> userList = new ArrayList<>();
+        users.forEach(e -> userList.add(e));
+        return userList;
+    }
+
+    @RequestMapping(value = "/roles", method = RequestMethod.GET)
+    public List<UserRole> getroles() {
+        Iterable<UserRole> roles = userRoleService.findAll();
+        List<UserRole> roleList = new ArrayList<>();
+        roles.forEach(e -> roleList.add(e));
+        return roleList;
+    }
+
+
+
 }

@@ -2,6 +2,7 @@ package com.github.dronezcc.riser.gui.controller.admin;
 
 import com.github.dronezcc.riser.gui.components.ProductBreadcrumbBuilder;
 import com.github.dronezcc.riser.gui.domain.Breadcrumb;
+import com.github.dronezcc.riser.gui.domain.MenuItem;
 import com.github.dronezcc.riser.gui.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import java.util.List;
 @RequestMapping("/admin/menu")
 public class MenuController {
 
-    MenuService menuService;
+    private final MenuService menuService;
 
     public MenuController(@Autowired MenuService menuService){
         this.menuService = menuService;
@@ -29,7 +30,10 @@ public class MenuController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String showModuleAdmin(Model model, HttpServletRequest request)
     {
+
+        List<MenuItem> menuData = menuService.getAll();
         List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
+        model.addAttribute("menuData", menuData);
         model.addAttribute("breadCrumb", collect );
         return "/admin/menu/admin";
     }

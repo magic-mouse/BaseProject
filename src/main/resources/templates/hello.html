@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html  layout:decorate="~{task/layout}"  xmlns="http://www.w3.org/1999/xhtml"
+<html   xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+     >
 <head>
     <title>Hello World!</title>
 </head>
 <body>
 
 
-<div layout:fragment="content">
 
         <div class="well">
 
         <h1>User Information <small>Information about the user in this well</small></h1>
         <p>Has Role:</p>
-        <li sec:authorize="hasRole('ROLE_USER')"><a href="/user">User CP</a></li>
+
             <div class="row">
            <div class="col-md-2 col-md-offset-5"><a href="/login" class="btn btn-primary btn-lg">Login</a></div>
             </div>
         </div>
 
-</div>
+        <div th:utext="${#servletContext.getRequestDispatcher('/api/open').include(#request,#response)}"/>
+
 
 </body>
 </html>

@@ -3,14 +3,18 @@ package com.github.dronezcc.riser.gui.controller;
 import com.github.dronezcc.riser.gui.domain.Task;
 import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
 import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
+import com.github.dronezcc.riser.gui.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -40,23 +44,12 @@ public class DefaultController {
         return "/task/list";
     }
 
-
-
     @RequestMapping("/task/err")
     public String taskErrTest(){
         return "/error";
     }
 
 
-    @RequestMapping("/p/hello")
-    public Pages makePage(){
-        Pages p = new Pages();
-        p.setAuthor("Me");
-        p.setContent("<html><head></head><body><h1>Hello</h1><p>Hello</p></body></html>");
-        p.setHeadline("Hello");
-        p.setPath("brain");
-        return pagesService.save(p);
-    }
 
     @RequestMapping("/p/{p}")
     public String showPage(@PathVariable String p,  Model model) {
