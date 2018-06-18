@@ -23,8 +23,8 @@ import java.util.List;
 @RequestMapping("/admin/user")
 @PreAuthorize("hasRole('ROLE_ADMIN')")
 public class UserController {
-
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
 
     private final UserService userService;
     private final UserRoleService  userRoleService;

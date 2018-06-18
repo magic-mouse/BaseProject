@@ -25,7 +25,8 @@ public class PageController {
     @Value("${server.port}")
     int serverPort;
 
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
     private final ReCaptchaService reCaptchaService;
     private final UserService userService;
     private final UserRoleService userRoleService;

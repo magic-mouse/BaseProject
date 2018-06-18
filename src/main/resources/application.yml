@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://mysql15.unoeuro.com/magic_mouse_dk_db2?useSSL=false
     username: magic_mouse_dk
-    password: t9nfp63z
+    password: secret
     driver-class-name: com.mysql.jdbc.Driver
     tomcat:
       test-while-idle: true

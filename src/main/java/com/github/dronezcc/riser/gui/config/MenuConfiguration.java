@@ -14,7 +14,8 @@ import java.util.List;
 @Configuration
 public class MenuConfiguration {
 
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
     MenuService menuService;
 
     public MenuConfiguration(@Autowired MenuService menuService){

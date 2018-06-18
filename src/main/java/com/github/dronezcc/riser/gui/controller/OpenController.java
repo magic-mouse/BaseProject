@@ -2,6 +2,7 @@ package com.github.dronezcc.riser.gui.controller;
 
 import com.github.dronezcc.riser.gui.domain.MenuItem;
 import com.github.dronezcc.riser.gui.services.MenuService;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,13 +14,20 @@ import java.util.List;
 @RestController
 public class OpenController {
 
-    @Autowired
     MenuService menuService;
+
+    @Autowired
+    Logger log;
+
+    public OpenController(@Autowired MenuService menuService){
+        this.menuService = menuService;
+    }
 
 
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping("/api/open")
     public List<String> openApi(){
+        log.info("This was openend");
         List<String> strings = new ArrayList<>();
         strings.add("This");
         strings.add("API");

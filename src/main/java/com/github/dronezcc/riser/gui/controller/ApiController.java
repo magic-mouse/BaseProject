@@ -36,8 +36,8 @@ public class ApiController {
 
 
 
-
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
     private final UserService userService;
     private final UserRoleService userRoleService;
     private final PagesService pagesService;
@@ -64,18 +64,12 @@ public class ApiController {
     public List<User> showUsers() {
         return userService.findAll();
     }
-<<<<<<< HEAD
-    @RequestMapping("/api/secret_password")
-    public void secretPassword(@RequestParam("password") String password, @RequestParam("name") String name) throws Exception {
-        BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
-=======
+
 
     @RequestMapping("/secret_password")
     public void secretPassword(@RequestParam("password") String password, @RequestParam("name") String name) {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
->>>>>>> modules
         String encoded_pass = bCryptPasswordEncoder.encode(password);
-
         User user = userService.findByUserName(name);
         user.setPassword(encoded_pass);
         User us = userService.save(user);

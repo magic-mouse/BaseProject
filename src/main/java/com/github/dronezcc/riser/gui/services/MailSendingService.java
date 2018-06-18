@@ -16,7 +16,8 @@ import java.util.Properties;
 @Service
 public class MailSendingService {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
     private JavaMailSender mailSender;
 
     @Autowired

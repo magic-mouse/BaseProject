@@ -2,6 +2,7 @@ package com.github.dronezcc.riser.gui.customers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customers")
 public class CustomersController {
 
-    Logger log = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private Logger log;
 
     @RequestMapping(value = {"", "/"})
     public String redirectToCustomers(){
