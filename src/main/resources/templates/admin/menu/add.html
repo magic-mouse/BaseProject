@@ -1,0 +1,81 @@
+<!DOCTYPE html >
+<html  layout:decorate="~{task/layout}"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      ng-app="admin">
+<head>
+
+
+    <title>Hello World!</title>
+
+</head>
+<body ng-controller="adminadd">
+
+<div layout:fragment="content">
+
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/user">Home</a></li>
+            <li role="presentation"><a href="/admin/user/add">New user</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li th:each="crumb, iterStat : ${breadCrumb}"  th:classappend="${iterStat.count >= iterStat.size} ? active "><span th:if="${not (iterStat.count != iterStat.size)}" th:text="${crumb.name}" ></span><a th:href="${crumb.getUrl()}" th:text="${crumb.getName()}" th:if="${(iterStat.count != iterStat.size)}"></a></li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>New user</h1>
+        <form class="form-horizontal">
+            <input type="hidden" id="id" name="id" ng-model="user.id"  th:if="${edit_mode == true}" th:attr="ng-init='user.id=\''+${user.getUserid()}+'\''"/>
+            <div>
+                <div class="form-group">
+                    <label for="username" class="col-sm-2 control-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="username" name="username" ng-model="user.username" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="email" name="email" ng-model="user.email" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Is user active</label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label for="active">
+                        <input type="checkbox" id="active" name="active" ng-model="user.active" value="active"/>
+                        Active</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Set active roles</label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                        <label for="roles">
+                        <input type="checkbox" id="roles" name="roles" ng-model="user.roles.role_admin"
+                               ng-true-value="'ROLE_ADMIN'"/>Admin</label>
+                        </div>
+                        <div class="checkbox">
+                        <label for="roles">
+                        <input type="checkbox" id="roles" name="roles" ng-model="user.roles.role_user"
+                               ng-true-value="'ROLE_USER'"/>User</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <input type="submit" ng-click="createUser()" class="btn btn-primary"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

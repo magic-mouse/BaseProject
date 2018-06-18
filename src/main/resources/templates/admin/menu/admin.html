@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html layout:decorate="~{task/layout}"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      ng-app="menu">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body ng-controller="menuadmin">
+
+<div layout:fragment="content">
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/menu">Home</a></li>
+            <li role="presentation"><a href="/admin/menu/add">New Menu</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li th:each="crumb, iterStat : ${breadCrumb}"  th:classappend="${iterStat.count >= iterStat.size} ? active "><span th:if="${not (iterStat.count != iterStat.size)}" th:text="${crumb.name}" ></span><a th:href="${crumb.getUrl()}" th:text="${crumb.getName()}" th:if="${(iterStat.count != iterStat.size)}"></a></li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>Menu Admin</h1>
+
+<table class="table">
+    <tr ng-repeat="md in menuData">
+        <td>{{md}}</td>
+        <td><a ng-href="/p/{{md.path}}">{{md.headline}}</a></td>
+        <td><a ng-href="/admin/menu/edit/{{md.id}}"><b class="glyphicon glyphicon-pencil"></b></a></td>
+        <td><a ng-href="/admin/menu/delete/{{md.id}}"><b class="glyphicon glyphicon-trash"></b></a></td>
+    </tr>
+</table>
+
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,13 +1,9 @@
 package com.github.dronezcc.riser.gui.domain;
 
-import org.springframework.context.annotation.Bean;
-
 public class SendValue {
 
-    String secret;
-    String response;
-
-
+    private String secret;
+    private String response;
 
     public SendValue() {
 

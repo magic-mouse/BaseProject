@@ -1,0 +1,13 @@
+
+.footer {
+    background-color: #444444;
+    color: #eeeeee;
+}
+
+.footer ul li {
+    display: block;
+}
+
+.footer ul li a {
+    color: #cccccc;
+}

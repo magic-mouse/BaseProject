@@ -1,7 +1,7 @@
 package com.github.dronezcc.riser.gui.services;
 
 import com.github.dronezcc.riser.gui.domain.User;
-import com.github.dronezcc.riser.gui.domain.UserRepository;
+import com.github.dronezcc.riser.gui.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +37,14 @@ public class UserService {
     public Long getUserIdFromEmail(String email){
         User uid = userRepository.findByEmail(email);
         return uid.getUserid();
+    }
+
+    public User findById(String uid) {
+        Long uidl = Long.parseLong(uid);
+       return this.findById(uid);
+    }
+
+    public User findById(long userId) {
+        return userRepository.findOne(userId);
     }
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <!--/*  Each token will be replaced by their respective titles in the resulting page. */-->
+        <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Base Fire</title>
+
+        <meta charset="UTF-8"/>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap-theme.min.css" />
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="/cdn/css/global.css" />
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well">
+                   <h1> This is a header well</h1>
+                </div>
+            </div>
+        </div>
+        <!--/* Standard layout can be mixed with Layout Dialect */-->
+        <div th:replace="fragments/header :: menu"></div>
+        <div class="container-fluid" layout:fragment="content" style="min-height: 300px">
+        </div>
+        <div th:replace="fragments/footer :: footer">&copy; 2014 The Static Templates</div>
+
+
+        <script src="/webjars/jquery/jquery.min.js"></script><!-- jQuery -->
+        <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/webjars/angularjs/1.6.6/angular.min.js" crossorigin="anonymous"></script>
+        <script src="/cdn/js/admin-controller.js"></script>
+    </body>
+</html>

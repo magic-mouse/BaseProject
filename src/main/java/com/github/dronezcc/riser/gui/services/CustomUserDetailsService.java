@@ -3,8 +3,8 @@ package com.github.dronezcc.riser.gui.services;
 import java.util.List;
 
 import com.github.dronezcc.riser.gui.domain.User;
-import com.github.dronezcc.riser.gui.domain.UserRepository;
-import com.github.dronezcc.riser.gui.domain.UserRolesRepository;
+import com.github.dronezcc.riser.gui.repository.UserRepository;
+import com.github.dronezcc.riser.gui.repository.UserRolesRepository;
 import com.github.dronezcc.riser.gui.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

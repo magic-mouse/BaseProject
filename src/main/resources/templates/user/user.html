@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html layout:decorate="~{task/layout}"    xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-    <div th:include="top :: header" th:remove="tag"></div>
+
     <title>Hello World!</title>
 
 
 
 </head>
 <body>
-<div th:include="top :: menu" th:remove="tag"></div>
 
-<div class="container-fluid">
-    <div class="starter-template">
-        <h1>Userdata</h1>
+
+<div layout:fragment="content">
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/user">Home</a></li>
+            <li role="presentation"><a href="/admin/user/add">New user</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li th:each="crumb, iterStat : ${breadCrumb}"  th:classappend="${iterStat.count >= iterStat.size} ? active "><span th:if="${not (iterStat.count != iterStat.size)}" th:text="${crumb.name}" ></span><a th:href="${crumb.getUrl()}" th:text="${crumb.getName()}" th:if="${(iterStat.count != iterStat.size)}"></a></li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>Userdata <small><a th:href="${'/admin/user/edit/' + {uid}}">Edit</a></small></h1>
         <table class="table table-striped">
-            <tr><td><label>Username:</label></td><td> <span th:text="${userName}"></span></td><td></td></tr>
-            <tr><td><label>Roles:</label></td><td> <span th:text="${userRole}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
-            <tr><td><label>Email:</label></td><td> <span th:text="${email}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
-            <tr><td><label>Activated:</label></td><td> <span th:text="${active}"></span></td><td><button class="btn btn-default glyphicon glyphicon-edit"></button></td></tr>
+            <tr><td><label>Username:</label></td><td><span th:text="${userName}"></span></td></tr>
+            <tr><td><label>Roles:</label></td><td> <span th:text="${userRole}"></span></td></tr>
+            <tr><td><label>Email:</label></td><td> <span th:text="${email}" ></span></td></tr>
+            <tr><td><label>Activated:</label></td><td> <span th:text="${active}"></span></td></tr>
         </table>
 
     </div>
 </div>
 
-</body>
+</body>3ö
 </html>

@@ -2,10 +2,10 @@ package com.github.dronezcc.riser.gui.domain;
 
 public class LostPasswordValidator {
 
-    boolean success;
-    String challengeTs;
-    String hostname;
-    String errorCodes;
+    private boolean success;
+    private String challengeTs;
+    private String hostname;
+    private String errorCodes;
 
     @Override
     public String toString() {

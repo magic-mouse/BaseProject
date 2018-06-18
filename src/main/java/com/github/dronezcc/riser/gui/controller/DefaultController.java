@@ -1,14 +1,20 @@
 package com.github.dronezcc.riser.gui.controller;
 
-import com.github.dronezcc.riser.gui.module.base.models.Pages;
-import com.github.dronezcc.riser.gui.module.base.models.PagesService;
+import com.github.dronezcc.riser.gui.domain.Task;
+import com.github.dronezcc.riser.gui.module.base.models.domain.Pages;
+import com.github.dronezcc.riser.gui.module.base.models.service.PagesService;
+import com.github.dronezcc.riser.gui.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -19,22 +25,31 @@ public class DefaultController {
 
     @RequestMapping("/")
     public String showFrontpage(Model model) {
-
-
-
-
          return "module/base/frontpage";
     }
 
-    @RequestMapping("/p/hello")
-    public Pages makePage(){
-        Pages p = new Pages();
-        p.setAuthor("Me");
-        p.setContent("<html><head></head><body><h1>Hello</h1><p>Hello</p></body></html>");
-        p.setHeadline("Hello");
-        p.setPath("brain");
-        return pagesService.save(p);
+    @RequestMapping("/task/test")
+    public String taskTest(Model m){
+
+        Task t = new Task();
+
+        t.setId(1);
+        t.setTitle("Not a title");
+        t.setText("not a text");
+        t.setDueTo("Not a due to");
+
+        List<Task> taskList = new ArrayList<>();
+
+        m.addAttribute("tasks", taskList);
+        return "/task/list";
     }
+
+    @RequestMapping("/task/err")
+    public String taskErrTest(){
+        return "/error";
+    }
+
+
 
     @RequestMapping("/p/{p}")
     public String showPage(@PathVariable String p,  Model model) {
@@ -49,11 +64,6 @@ public class DefaultController {
         return "module/base/page";
     }
 
-    @RequestMapping("/module/base/admin/")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String showModuleAdmin(Model model)
-    {
-        return "module/base/admin/admin";
-    }
+
 }
 

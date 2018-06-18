@@ -31,7 +31,7 @@ public class ReCaptchaService {
         map.add("secret", captchaSecret);
         map.add("response", stringToValidate);
 
-        HttpEntity<MultiValueMap<String,String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
+        HttpEntity<MultiValueMap<String,String>> request = new HttpEntity<>(map, headers);
 
         ResponseEntity<Map> quote = restTemplate.postForEntity(captchaUrl,request, Map.class);
 

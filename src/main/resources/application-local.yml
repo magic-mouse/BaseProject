@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    password: SomeRandomPass!
+    url: jdbc:mysql://localhost/gui?useSSL=false
+    username: mouse
+server:
+  port: 8888

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html layout:decorate="~{task/layout}"   xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      ng-app="base">
+<head>
+
+    <title>Spring Security Example</title>
+
+</head>
+<body ng-controller="baseadd">
+
+
+<div layout:fragment="content">
+    <div class="row">
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/base">Home</a></li>
+            <li role="presentation"><a href="/admin/base/add">New page</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li th:each="crumb, iterStat : ${breadCrumb}"  th:classappend="${iterStat.count >= iterStat.size} ? active "><span th:if="${not (iterStat.count != iterStat.size)}" th:text="${crumb.name}" ></span><a th:href="${crumb.getUrl()}" th:text="${crumb.getName()}" th:if="${(iterStat.count != iterStat.size)}"></a></li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>Add new page</h1>
+
+        <!--String headline;-->
+        <!--String path;-->
+        <!--String content;-->
+        <!--String author;-->
+        <!--String template;-->
+
+        <form class="form-horizontal">
+            <div>
+                <div class="form-group">
+                    <label for="page_name" class="col-sm-2 control-label">Page name</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="page_name" name="page_name" ng-model="page.page_name" class="form-control"/>
+                    </div>
+                </div>  <div class="form-group">
+                    <label for="path" class="col-sm-2 control-label">Path</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="path" name="path" ng-model="page.path" class="form-control"/>
+                    </div>
+                </div>  <div class="form-group">
+                    <label for="content" class="col-sm-2 control-label">Content</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="content" name="content" ng-model="page.content" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <input type="submit" ng-click="createBase()" class="btn btn-primary"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    </div>
+</div>
+</body>
+</html>
