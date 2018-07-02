@@ -31,11 +31,19 @@ public class MenuService {
     }
 
     public List<MenuItem> getAll() {
+        Iterable<MenuItem> menuItems;
         log.debug("Finds all menuItems");
-        List<MenuItem> menuItemList = new ArrayList<>();
-        Iterable<MenuItem> menuItems =  menuRepository.findAll();
-        menuItemList.forEach(m->{log.debug("LALALALALLALALALALLALALALALLALA " + m.getValue()); menuItemList.add(m);});
-
+        List<MenuItem> menuItemList;
+        try {
+            menuItemList = new ArrayList<>();
+            menuItems = menuRepository.findAll();
+            menuItems.forEach(m ->
+                menuItemList.add(m)
+            );
+        }catch(Exception e){
+            log.info("Error",e);
+            return new ArrayList<>();
+        }
         return menuItemList;
     }
 

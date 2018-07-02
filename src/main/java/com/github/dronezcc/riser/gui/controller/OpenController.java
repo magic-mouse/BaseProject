@@ -39,9 +39,9 @@ public class OpenController {
     @RequestMapping("/addmenu")
     public void addMenu(){
         MenuItem menuItem = new MenuItem();
-        menuItem.setLocation("//runt");
-        menuItem.setValue("HelloThis");
-        menuItem.setWeight(2);
+//        menuItem.setLocation("//runt");
+//        menuItem.setValue("HelloThis");
+//        menuItem.setWeight(2);
 
         menuService.save(menuItem);
 

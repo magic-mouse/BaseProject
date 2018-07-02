@@ -13,7 +13,6 @@ public class BaseConfig {
     public Logger loggerFactory(InjectionPoint injectionPoint) {
         Class<?> classOnWired = injectionPoint.getMember().getDeclaringClass();
         return LoggerFactory.getLogger(classOnWired);
-
     }
 
 }

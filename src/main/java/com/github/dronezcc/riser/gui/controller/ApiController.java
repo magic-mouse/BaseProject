@@ -170,7 +170,7 @@ public class ApiController {
     public List<MenuItem> getMenu() {
         Iterable<MenuItem> menuItems = menuService.getAll();
         List<MenuItem> menuItemList = new ArrayList<>();
-        menuItemList.forEach(e -> menuItemList.add(e));
+        menuItems.forEach(e -> menuItemList.add(e));
         return menuItemList;
     }
 

@@ -4,7 +4,7 @@ package com.github.dronezcc.riser.gui.config;
 import com.github.dronezcc.riser.gui.domain.MenuItem;
 import com.github.dronezcc.riser.gui.services.MenuService;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
