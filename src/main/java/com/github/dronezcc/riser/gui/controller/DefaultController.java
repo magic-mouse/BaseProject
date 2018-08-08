@@ -39,8 +39,10 @@ public class DefaultController {
         t.setDueTo("Not a due to");
 
         List<Task> taskList = new ArrayList<>();
+        taskList.add(t);
 
         m.addAttribute("tasks", taskList);
+
         return "/task/list";
     }
 

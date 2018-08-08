@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html layout:decorate="~{task/layout}"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      ng-app="admin">
+<head>
+    <title>Edit Menu Item</title>
+</head>
+<body ng-controller="adminmenuedit" th:attr="ng-init='setId('+${id}+');'">
+
+<div layout:fragment="content">
+
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="/admin/user">Home</a></li>
+            <li role="presentation"><a href="/admin/user/add">New user</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li th:each="crumb, iterStat : ${breadCrumb}"  th:classappend="${iterStat.count >= iterStat.size} ? active "><span th:if="${not (iterStat.count != iterStat.size)}" th:text="${crumb.name}" ></span><a th:href="${crumb.getUrl()}" th:text="${crumb.getName()}" th:if="${(iterStat.count != iterStat.size)}"></a></li>
+        </ol>
+    </div>
+    <div class="col-sm-10">
+        <h1>Edit Menu</h1>
+        <form class="form-horizontal">
+
+            <div>
+                <div class="form-group">
+                    <label for="id" class="col-sm-2 control-label">Id</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="id" name="id" ng-model="menu.id" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location" class="col-sm-2 control-label">Location</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="location" name="location" ng-model="menu.location" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="value" class="col-sm-2 control-label">Value</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="value" name="value" ng-model="menu.value" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="weight" class="col-sm-2 control-label">Weight</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="weight" name="weight" ng-model="menu.weight" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="justNote" class="col-sm-2 control-label">Just Note</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="justNote" name="justNote" ng-model="menu.justNote" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <input type="submit" ng-click="updateMenu()" class="btn btn-primary"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

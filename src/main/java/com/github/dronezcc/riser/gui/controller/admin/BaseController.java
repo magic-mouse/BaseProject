@@ -52,6 +52,13 @@ public class BaseController {
 
         return new ResponseEntity<>("{\"post_deleted\": " + id +")", HttpStatus.OK);
     }
+
+    @RequestMapping("/edit/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String editPageAdmin(Model model, HttpServletRequest request, @PathVariable Integer id) {
+
+       return "/admin/menu/edit";
+    }
 }
 
 

@@ -174,6 +174,21 @@ public class ApiController {
         return menuItemList;
     }
 
+    @RequestMapping(value = "/menu", method = RequestMethod.POST)
+    public MenuItem postMenu(@RequestBody MenuItem menuItem) {
+
+        System.out.println(menuItem);
+
+        return menuItem;
+    }
+
+    @RequestMapping(value = "/menu/{id}", method = RequestMethod.GET)
+    public MenuItem getOneMenu(@PathVariable Integer id ){
+        // TODO: Validation and stuff
+        MenuItem menuItem = menuService.findById(id);
+        return menuItem;
+    }
+
     @RequestMapping(value = "/tokens", method = RequestMethod.GET)
     public List<Token> getToken() {
         Iterable<Token> tokens = tokenService.findAll();

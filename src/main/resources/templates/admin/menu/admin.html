@@ -24,7 +24,9 @@
 
 <table class="table">
     <tr ng-repeat="md in menuData">
-        <td>{{md}}</td>
+        <td>{{md.value}}</td>
+        <td>{{md.weight}}</td>
+        <td>{{md.location}}</td>
         <td><a ng-href="/p/{{md.path}}">{{md.headline}}</a></td>
         <td><a ng-href="/admin/menu/edit/{{md.id}}"><b class="glyphicon glyphicon-pencil"></b></a></td>
         <td><a ng-href="/admin/menu/delete/{{md.id}}"><b class="glyphicon glyphicon-trash"></b></a></td>

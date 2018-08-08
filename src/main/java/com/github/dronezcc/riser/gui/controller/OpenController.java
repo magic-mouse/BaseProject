@@ -27,7 +27,6 @@ public class OpenController {
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping("/api/open")
     public List<String> openApi(){
-        log.info("This was openend");
         List<String> strings = new ArrayList<>();
         strings.add("This");
         strings.add("API");
@@ -39,12 +38,8 @@ public class OpenController {
     @RequestMapping("/addmenu")
     public void addMenu(){
         MenuItem menuItem = new MenuItem();
-//        menuItem.setLocation("//runt");
-//        menuItem.setValue("HelloThis");
-//        menuItem.setWeight(2);
-
+        menuItem.setLocation("//runt");
         menuService.save(menuItem);
-
     }
 
 }

@@ -32,7 +32,6 @@ public class MenuService {
 
     public List<MenuItem> getAll() {
         Iterable<MenuItem> menuItems;
-        log.debug("Finds all menuItems");
         List<MenuItem> menuItemList;
         try {
             menuItemList = new ArrayList<>();
@@ -50,5 +49,10 @@ public class MenuService {
 
     public void save(MenuItem menuItem) {
         menuRepository.save(menuItem);
+    }
+
+    public MenuItem findById(Integer id) {
+        // TODO: Validation, verification
+        return menuRepository.findOne(id);
     }
 }

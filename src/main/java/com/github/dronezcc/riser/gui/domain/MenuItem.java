@@ -9,7 +9,7 @@ public class MenuItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     @Column
-    String loation;
+    String location;
     @Column
     String value;
     @Column
@@ -29,11 +29,11 @@ public class MenuItem {
     }
 
     public String getLocation() {
-        return loation;
+        return location;
     }
 
     public void setLocation(String loation) {
-        this.loation = loation;
+        this.location = loation;
     }
 
     public String getValue() {
@@ -64,7 +64,7 @@ public class MenuItem {
     public String toString() {
         return "MenuItem{" +
                 "id=" + id +
-                ", loation='" + loation + '\'' +
+                ", location='" + location + '\'' +
                 ", value='" + value + '\'' +
                 ", weight=" + weight +
                 ", justNote='" + justNote + '\'' +

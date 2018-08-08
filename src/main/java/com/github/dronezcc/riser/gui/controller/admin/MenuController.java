@@ -30,7 +30,6 @@ public class MenuController {
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public String showModuleAdmin(Model model, HttpServletRequest request)
     {
-
         List<MenuItem> menuData = menuService.getAll();
         List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
         model.addAttribute("menuData", menuData);
@@ -49,11 +48,21 @@ public class MenuController {
 
     @RequestMapping("/delete/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> deletePageAdmin(Model model, HttpServletRequest request, @PathVariable Integer id) {
-
+    public ResponseEntity<?> deletePageAdmin(@PathVariable Integer id) {
         menuService.deleteById(id);
-
         return new ResponseEntity<>("{\"post_deleted\": " + id +")", HttpStatus.OK);
+    }
+
+    @RequestMapping("/edit/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String editPageAdmin(@PathVariable Integer id, Model model, HttpServletRequest request)
+    {
+        MenuItem menuItem = menuService.findById(id);
+        List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
+        model.addAttribute("id", id);
+        model.addAttribute("breadCrumb", collect );
+        model.addAttribute("menu", menuItem);
+        return "/admin/menu/edit";
     }
 }
 

@@ -19,10 +19,27 @@ angular.module('admin', [])
                     console.log(error);
                 }
             );
+        }})
+    .controller('adminmenuedit', function ($scope, $http, $window) {
+        $scope.menu = {};
+        $scope.id = 0;
+        $scope.setId = function(id){
+            $scope.id = id;
+            $http.get('/api/menu/' + $scope.id, $scope.menu).then(function(data){
+               $scope.menu = data.data;
+            });
+
         }
 
+        $scope.updateMenu = function(){
+            console.log($scope.menu);
+            $http.post('/api/menu').then(function(data){
+                console.log("Returning value", data);
+            });
+        }
 
-});
+        });
+
 
 angular.module('password', [])
     .controller('user', function ($scope, $http) {
@@ -70,6 +87,7 @@ angular.module('base', [])
             console.log($scope.pagesData);
         });
     });
+
 
 angular.module('menu', [])
  .controller('menuadmin', function ($scope, $http) {
