@@ -22,14 +22,14 @@ import java.util.List;
 @EnableWebSecurity
 @RequestMapping("/admin/user")
 @PreAuthorize("hasRole('ROLE_ADMIN')")
-public class UserController {
+public class AdminUserController {
     @Autowired
     private Logger log;
 
     private final UserService userService;
     private final UserRoleService  userRoleService;
 
-    public UserController(@Autowired UserService userService, @Autowired UserRoleService userRoleService){
+    public AdminUserController(@Autowired UserService userService, @Autowired UserRoleService userRoleService){
         this.userService = userService;
         this.userRoleService = userRoleService;
     }
@@ -44,7 +44,8 @@ public class UserController {
 
     @RequestMapping("/edit/{uid}")
     public String editUser(Model model, HttpServletRequest request, @PathVariable String uid) {
-        User user = userService.findById(uid);
+        Long uidl = Long.parseLong(uid);
+        User user = userService.findById(uidl);
 
         List<Breadcrumb> collect = new ProductBreadcrumbBuilder().getBreadcrumbs(request.getServletPath());
         model.addAttribute("breadCrumb", collect );

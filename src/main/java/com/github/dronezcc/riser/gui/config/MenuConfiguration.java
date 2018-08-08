@@ -25,7 +25,6 @@ public class MenuConfiguration {
     @Bean(name = "messages")
     public List<MenuItem> messages() {
         List<MenuItem> menuItems = menuService.getAll();
-        log.debug("MenuItems " + menuItems.size());
         return menuItems;
     }
 }
