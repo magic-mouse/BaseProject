@@ -205,6 +205,12 @@ public class ApiController {
         return userList;
     }
 
+    @RequestMapping(value = "/users/{userid}", method = RequestMethod.GET)
+    public User getUser(@PathVariable("userid") Long userid) {
+        User user = userService.findById(userid);
+        return user;
+    }
+
     @RequestMapping(value = "/roles", method = RequestMethod.GET)
     public List<UserRole> getroles() {
         Iterable<UserRole> roles = userRoleService.findAll();

@@ -21,12 +21,12 @@
     <div class="col-sm-10">
         <h1>New user</h1>
         <form class="form-horizontal">
-            <input type="hidden" id="id" name="id" ng-model="user.id"  th:if="${edit_mode == true}" th:attr="ng-init='user.id=\''+${user.getUserid()}+'\''"/>
+            <input type="hidden" id="id" name="id" th:if="${edit_mode == true}" th:attr="ng-init='userid='+${user.getUserid()}+''"/>
             <div>
                 <div class="form-group">
                     <label for="username" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
-                        <input type="text" id="username" name="username" ng-model="user.username" class="form-control"/>
+                        <input type="text" id="username" name="username" ng-model="user.userName" class="form-control"/>
                     </div>
                 </div>
 
@@ -37,18 +37,17 @@
                     </div>
                 </div>
 
-
-
                 <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Is user active</label>
                     <div class="col-sm-10">
                         <div class="checkbox">
                             <label for="active">
-                        <input type="checkbox" id="active" name="active" ng-model="user.active" value="active"/>
+                        <input type="checkbox" id="enabled" name="enabled" ng-model="user.enabled" value="enabled"/>
                         Active</label>
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Set active roles</label>
                     <div class="col-sm-10">

@@ -9,6 +9,20 @@ angular.module('admin', [])
             });
     })
     .controller('adminadd', function ($scope, $http, $window) {
+
+        $scope.$watch('userid',function() {
+
+            $http.get('/api/users/' + $scope.userid).then(
+                function (data) {
+                 $scope.user = data.data;
+                },
+                function (data) {
+                    console.log(data);
+                }
+            );
+        });
+
+
         $scope.createUser = function(){
 
             $http.post('/api/users/create', $scope.user).then(
