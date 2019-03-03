@@ -26,10 +26,10 @@
 </div>
 <body>
 
-<div th:fragment="menu">
+<div th:fragment="menu" >
 
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse"  ng-controller="menuadmin">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -47,10 +47,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
-                <ul class="nav navbar-nav" th:each="message : ${@messages}">
-                    <li role="presentation"><a th:href="${message.location}" th:text="${message.value}">Title ...</a>
-                    </li>
-                </ul>
+                <div this-is></div>
+
+                <this-is></this-is>
 
                 <ul sec:authorize="!isAuthenticated()" class="nav navbar-nav navbar-right">
                     <li role="presentation"><p class="navbar-btn"><a href="/login" class="btn btn-primary">login</a></p>

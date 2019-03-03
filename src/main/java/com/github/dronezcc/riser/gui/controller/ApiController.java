@@ -176,9 +176,6 @@ public class ApiController {
 
     @RequestMapping(value = "/menu", method = RequestMethod.POST)
     public MenuItem postMenu(@RequestBody MenuItem menuItem) {
-
-        System.out.println(menuItem);
-
         return menuItem;
     }
 
